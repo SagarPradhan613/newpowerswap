@@ -12,6 +12,7 @@ import Footer from './components/Footer'
 import Hero from './components/Hero'
 import MetricsSection from './components/MetricsSection'
 import { NewsSection } from './components/NewsSection'
+import NewHeroSection from './components/NewHeroSection'
 import {
   InnerWedgeWrapper,
   OuterWedgeWrapper,
@@ -39,7 +40,8 @@ const Home: React.FC<React.PropsWithChildren> = () => {
       <style jsx global>
         {`
           #home-1 .page-bg {
-            background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
+            // background: linear-gradient(139.73deg, #e6fdff 0%, #f3efff 100%);
+            background-color: #07130c;
           }
           [data-theme='dark'] #home-1 .page-bg {
             background: radial-gradient(103.12% 50% at 50% 50%, #21193a 0%, #191326 100%);
@@ -71,7 +73,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           }
         `}
       </style>
-      <StyledHeroSection
+      {/* <StyledHeroSection
         innerProps={{ style: { margin: '0', width: '100%', overflow: 'visible', padding: '16px' } }}
         containerProps={{
           id: 'home-1',
@@ -80,8 +82,11 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         hasCurvedDivider={false}
       >
         <MultipleBanner />
-        <Hero />
-      </StyledHeroSection>
+      
+     
+      </StyledHeroSection> */}
+      <NewHeroSection />
+      {/* <Hero /> */}
       <PageSection
         innerProps={{ style: { margin: '0', width: '100%' } }}
         containerProps={{

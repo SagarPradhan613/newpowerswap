@@ -3,7 +3,7 @@ import { ArrowForwardIcon, Box, Button, Flex, Link, useMatchBreakpoints } from '
 import { ASSET_CDN } from 'config/constants/endpoints'
 import Image from 'next/legacy/image'
 import { memo } from 'react'
-import { styled, css, keyframes } from 'styled-components'
+import { css, keyframes, styled } from 'styled-components'
 import * as S from './Styled'
 
 const fading = keyframes`
@@ -27,7 +27,7 @@ const { usnBunny, unsTitleMobile, usnTitle, unsLogo, usnBg } = {
 }
 
 const textStyle = css`
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   line-height: 98%;
@@ -100,7 +100,7 @@ const StyledSubheading = styled.div`
 `
 
 const MobileSubheading = styled.div`
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   font-size: 20px;

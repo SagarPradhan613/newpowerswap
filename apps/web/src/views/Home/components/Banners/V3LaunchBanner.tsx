@@ -4,7 +4,7 @@ import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 
 import { ASSET_CDN } from 'config/constants/endpoints'
 import Image from 'next/legacy/image'
-import { styled, css, keyframes } from 'styled-components'
+import { css, keyframes, styled } from 'styled-components'
 import * as S from './Styled'
 
 const { v3LaunchBg, v3LaunchBgMobile, v3LaunchBunny, v3LaunchBunnyMobile, v3LaunchBnb, v3LaunchEth, v3LaunchFlag } = {
@@ -59,7 +59,7 @@ const TextBox = styled(Flex)`
 
 const StyledSubheading = styled.div`
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   font-size: 24px;
@@ -182,7 +182,7 @@ const TitleWrapper = styled(Flex)`
 `
 
 const Title = styled.div`
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;

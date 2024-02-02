@@ -1,11 +1,11 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Flex, Link, OpenNewIcon, Text, useMatchBreakpoints, Button, Svg, SvgProps } from '@pancakeswap/uikit'
+import { Button, Flex, Link, OpenNewIcon, Svg, SvgProps, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import Image from 'next/legacy/image'
 import { memo } from 'react'
 import { styled } from 'styled-components'
 import * as S from './Styled'
-import { opbnbBunny, opbnbBg, opbnbBgMobile } from './images'
+import { opbnbBg, opbnbBgMobile, opbnbBunny } from './images'
 
 const pancakeSwapLogo = `${ASSET_CDN}/web/banners/ethXpancakeswap.png`
 
@@ -75,7 +75,7 @@ const BgWrapper = styled.div`
 const Header = styled.div`
   padding-right: 100px;
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   font-size: 25px;

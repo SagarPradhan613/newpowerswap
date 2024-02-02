@@ -1,5 +1,5 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Button, Text, useMatchBreakpoints, Box, OpenNewIcon } from '@pancakeswap/uikit'
+import { Box, Button, OpenNewIcon, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import Image from 'next/legacy/image'
 import { styled } from 'styled-components'
@@ -24,7 +24,7 @@ const RightWrapper = styled.div`
   }
 `
 const Title = styled.div`
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 23px;

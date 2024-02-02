@@ -1,13 +1,13 @@
-import { Button, Flex, Text, useMatchBreakpoints, OpenNewIcon } from '@pancakeswap/uikit'
+import { Button, Flex, OpenNewIcon, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 
 import { useTranslation } from '@pancakeswap/localization'
 import Image from 'next/legacy/image'
-import { styled, css } from 'styled-components'
+import { css, styled } from 'styled-components'
 
 import { ASSET_CDN } from 'config/constants/endpoints'
 
-import { zkSyncBg, zkSyncBunny, zkSyncBgMobile, eraLogo } from './images'
+import { eraLogo, zkSyncBg, zkSyncBgMobile, zkSyncBunny } from './images'
 import * as S from './Styled'
 
 const pancakeSwapLogo = `${ASSET_CDN}/web/banners/ethXpancakeswap.png`
@@ -45,7 +45,7 @@ const RightWrapper = styled.div`
 
 const Title = styled.div`
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-size: 25.526px;
   font-style: normal;
   font-weight: 800;

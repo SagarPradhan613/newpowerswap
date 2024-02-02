@@ -22,16 +22,20 @@ const Wrapper = styled.div`
   width: 100%;
   display: grid;
   grid-template-rows: auto 1fr;
+  background-color: #07130c;
 `;
 
 const StyledNav = styled.nav`
+  position: relative;
+  z-index: 50;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: ${MENU_HEIGHT}px;
-  background-color: ${({ theme }) => theme.nav.background};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  background: transparent;
+  // background-color: ${({ theme }) => theme.nav.background};
+  // border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   transform: translate3d(0, 0, 0);
 
   padding-left: 16px;
@@ -144,33 +148,39 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
         }}
       >
         <Wrapper>
-          <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
-            {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
-            <StyledNav>
-              <Flex>
-                <Logo href={homeLink?.href ?? "/"} />
-                <AtomBox display={{ xs: "none", md: "block" }}>
-                  <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
-                </AtomBox>
-              </Flex>
-              <Flex alignItems="center" height="100%">
-                <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
-                  <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
-                </AtomBox>
-                <Box mt="4px">
-                  <LangSelector
-                    currentLang={currentLang}
-                    langs={langs}
-                    setLang={setLang}
-                    buttonScale="xs"
-                    color="textSubtle"
-                    hideLanguage
-                  />
-                </Box>
-                {rightSide}
-              </Flex>
-            </StyledNav>
-          </FixedContainer>
+          <div style={{ position: "absolute", top: "0", left: "0", width: "100%" }}>
+            <img src="images/firstleftmask.png" alt="img" />
+          </div>
+          <div style={{ position: "absolute", right: "0", width: "100%" }}>
+            <img src="images/firstbottomright.png" style={{ width: "100%" }} alt="img" />
+          </div>
+          {/* <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}> */}
+          {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
+          <StyledNav>
+            <Flex>
+              <Logo href={homeLink?.href ?? "/"} />
+              <AtomBox display={{ xs: "none", md: "block" }}>
+                <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
+              </AtomBox>
+            </Flex>
+            <Flex alignItems="center" height="100%">
+              <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
+                <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
+              </AtomBox>
+              <Box mt="4px">
+                <LangSelector
+                  currentLang={currentLang}
+                  langs={langs}
+                  setLang={setLang}
+                  buttonScale="xs"
+                  color="textSubtle"
+                  hideLanguage
+                />
+              </Box>
+              {rightSide}
+            </Flex>
+          </StyledNav>
+          {/* </FixedContainer> */}
           {subLinks ? (
             <Flex justifyContent="space-around" overflow="hidden">
               <SubMenuItems
@@ -191,7 +201,8 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
           ) : (
             <div />
           )}
-          <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}>
+          {/* <BodyWrapper mt={!subLinks ? `${totalTopMenuHeight + 1}px` : "0"}> */}
+          <BodyWrapper>
             <Inner>{children}</Inner>
           </BodyWrapper>
         </Wrapper>

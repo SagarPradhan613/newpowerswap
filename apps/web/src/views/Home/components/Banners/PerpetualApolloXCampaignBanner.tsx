@@ -1,9 +1,9 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { ArrowForwardIcon, Button, Link, Text, useMatchBreakpoints, useModal, Flex, Box } from '@pancakeswap/uikit'
+import { ArrowForwardIcon, Box, Button, Flex, Link, Text, useMatchBreakpoints, useModal } from '@pancakeswap/uikit'
 import USCitizenConfirmModal from 'components/Modal/USCitizenConfirmModal'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import { useActiveChainId } from 'hooks/useActiveChainId'
-import { useUserNotUsCitizenAcknowledgement, IdType } from 'hooks/useUserIsUsCitizenAcknowledgement'
+import { IdType, useUserNotUsCitizenAcknowledgement } from 'hooks/useUserIsUsCitizenAcknowledgement'
 import Image from 'next/legacy/image'
 import { memo, useMemo } from 'react'
 import { styled, useTheme } from 'styled-components'
@@ -74,7 +74,7 @@ const Header = styled.div`
     font-size: 40px;
     color: #7645d9;
     background: #ffffff;
-    font-family: 'Kanit';
+    font-family: 'Poppins';
     -webkit-background-clip: text;
     font-weight: 800;
     font-size: 31.0448px;
@@ -91,7 +91,7 @@ const Header = styled.div`
 
 const StyledSubheading = styled.div`
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   font-size: 24px;

@@ -1,11 +1,11 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Box, Flex, Link, OpenNewIcon, Text, useMatchBreakpoints, Button } from '@pancakeswap/uikit'
+import { Box, Button, Flex, Link, OpenNewIcon, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { ASSET_CDN } from 'config/constants/endpoints'
 import Image from 'next/legacy/image'
 import { memo } from 'react'
-import { styled, keyframes } from 'styled-components'
+import { keyframes, styled } from 'styled-components'
 import * as S from './Styled'
-import { gameDesktopBg, gameMobileBunny, gameDesktopBunny, gameCube, gameText, gameMobileText } from './images'
+import { gameCube, gameDesktopBg, gameDesktopBunny, gameMobileBunny, gameMobileText, gameText } from './images'
 
 const flyingAnim = keyframes`
   from {
@@ -72,7 +72,7 @@ const BgWrapper = styled.div`
 const Header = styled.div`
   padding-right: 100px;
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   font-size: 24px;

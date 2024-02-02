@@ -1,11 +1,11 @@
 import { useTranslation } from '@pancakeswap/localization'
-import { Button, Text, useMatchBreakpoints, OpenNewIcon } from '@pancakeswap/uikit'
+import { Button, OpenNewIcon, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
 
 import Image from 'next/legacy/image'
-import { styled, css, keyframes } from 'styled-components'
-import { v3AirdropBunny, v3BgBlingBlur, v3BgBlingNormal, v3BgCoinDown, v3BgCoinUp, v3Board } from './images'
+import { css, keyframes, styled } from 'styled-components'
 import * as S from './Styled'
+import { v3AirdropBunny, v3BgBlingBlur, v3BgBlingNormal, v3BgCoinDown, v3BgCoinUp, v3Board } from './images'
 
 const shineAnimation = keyframes`
 	0% {transform:translateX(-100%);}
@@ -50,7 +50,7 @@ const fading = keyframes`
 `
 const StyledSubheading = styled.div`
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
   font-size: 25px;
@@ -172,7 +172,7 @@ const RightWrapper = styled.div`
   }
 `
 const Title = styled.div`
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 600;
   font-size: 23px;

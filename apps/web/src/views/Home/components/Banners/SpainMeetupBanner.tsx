@@ -1,13 +1,13 @@
+import { useCountdown } from '@pancakeswap/hooks'
+import { useTranslation } from '@pancakeswap/localization'
+import { Flex, FlexGap, Link, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
+import Image from 'next/image'
 import { memo, useMemo } from 'react'
 import styled from 'styled-components'
-import Image from 'next/image'
-import { Flex, FlexGap, useMatchBreakpoints, Link, Text } from '@pancakeswap/uikit'
-import { useTranslation } from '@pancakeswap/localization'
-import { useCountdown } from '@pancakeswap/hooks'
 
 import { ASSET_CDN } from 'config/constants/endpoints'
 
-import { Wrapper, Inner } from './Styled'
+import { Inner, Wrapper } from './Styled'
 import bg from './images/spain-meetup-bg.png'
 import bunny from './images/spain-meetup-bunny.png'
 import ticketBtn from './images/spain-meetup-ticket-btn.png'
@@ -32,7 +32,7 @@ const ContentWrapper = styled(FlexGap)`
 
 const StyledHeading = styled.div`
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   font-size: 1rem;
@@ -69,7 +69,7 @@ const StyledHeading = styled.div`
 
 const HeadLine = styled.div`
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 900;
   font-size: 3rem;

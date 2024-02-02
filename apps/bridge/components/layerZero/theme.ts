@@ -50,7 +50,7 @@ export const PancakeSwapTheme = {
   dark: {
     typography: {
       ...defaultTypography,
-      fontFamily: "'Kanit', sans-serif",
+      fontFamily: "'Poppins', sans-serif",
     },
     shape: { borderRadius },
     palette: {
@@ -83,7 +83,7 @@ export const PancakeSwapTheme = {
   light: {
     typography: {
       ...defaultTypography,
-      fontFamily: "'Kanit', sans-serif",
+      fontFamily: "'Poppins', sans-serif",
     },
     shape: { borderRadius },
     palette: {

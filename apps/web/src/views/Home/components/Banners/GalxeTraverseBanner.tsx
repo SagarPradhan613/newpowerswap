@@ -65,7 +65,7 @@ const RightWrapper = styled.div`
 
 const Title = styled.div`
   position: relative;
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   line-height: 98%;
   letter-spacing: 0.01em;

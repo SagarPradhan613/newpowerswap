@@ -3,7 +3,7 @@ import { ArrowForwardIcon, Box, Button, Flex, Link, useMatchBreakpoints } from '
 import { ASSET_CDN } from 'config/constants/endpoints'
 import Image from 'next/legacy/image'
 import { memo } from 'react'
-import { styled, css } from 'styled-components'
+import { css, styled } from 'styled-components'
 import * as S from './Styled'
 
 const { pancakeProtectorBunny, pancakeProtectorBgMobile, pancakeProtectorBg, pancakeSwapLogo } = {
@@ -14,7 +14,7 @@ const { pancakeProtectorBunny, pancakeProtectorBgMobile, pancakeProtectorBg, pan
 }
 
 const textStyle = css`
-  font-family: 'Kanit';
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 800;
   line-height: 98%;
