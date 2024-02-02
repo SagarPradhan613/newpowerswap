@@ -21,10 +21,10 @@ export const MetricsCard: React.FC<MetricsCardProps> = ({ title, value, descript
   const { isMobile } = useMatchBreakpoints()
   return (
     <Box {...rest}>
-      <Text fontSize={isMobile ? '16px' : '20px'} textAlign="center" fontWeight={600} lineHeight="120%">
+      {/* <Text fontSize={isMobile ? '16px' : '20px'} textAlign="center" fontWeight={600} lineHeight="120%">
         {title}
-      </Text>
-      <Text
+      </Text> */}
+      {/* <Text
         lineHeight="110%"
         textAlign="center"
         fontWeight={600}
@@ -43,14 +43,44 @@ export const MetricsCard: React.FC<MetricsCardProps> = ({ title, value, descript
           separator=","
         >
           {({ countUpRef }) => <span ref={countUpRef} />}
+          
         </CountUp>
-      </Text>
+        <p style={{color:"white",fontWeight:"700",fontSize:"30px"}}>Users</p>
+      </Text> */}
+      <div
+        style={{
+          justifyContent: 'center',
+          marginTop: '2rem',
+          display: 'flex',
+          whiteSpace: 'nowrap',
+          alignItems: 'center',
+          color: 'white',
+          fontWeight: '700',
+          fontSize: '30px',
+        }}
+      >
+        <CountUp
+          start={0}
+          preserveValue
+          delay={0}
+          end={value}
+          decimalPlaces={3}
+          decimals={0}
+          duration={1}
+          prefix={prefix ?? ''}
+          separator=","
+        >
+          {({ countUpRef }) => <span ref={countUpRef} />}
+        </CountUp>
+        <p style={{ color: 'white', marginLeft: '10px', fontWeight: '700', fontSize: '30px' }}>{title}</p>
+      </div>
       <Text
-        fontSize={isMobile ? '14px' : '16px'}
+        style={{ marginTop: '1rem' }}
+        fontSize={isMobile ? '16px' : '16px'}
         textAlign="center"
-        fontWeight={600}
+        fontWeight={500}
         lineHeight="120%"
-        color={theme.colors.textSubtle}
+        color="white"
       >
         {description}
       </Text>

@@ -183,6 +183,28 @@ const HeroLeftPara = styled.p`
     margin-top: 2rem;
   }
 `
+
+const AbsoluteBottomRight = styled.div`
+  position: absolute;
+  right: 0;
+  z-index: 0;
+
+  @media (max-width: 767px) {
+    top: 70%;
+    width: 60%;
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    top: 30%;
+    width: 50%;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    top: 10%;
+  }
+`
 const NewHeroSection = () => {
   const { t } = useTranslation()
   const { isMobile, isXs, isMd } = useMatchBreakpoints()
@@ -236,9 +258,9 @@ const NewHeroSection = () => {
               </Button>
             </NextLinkFromReactRouter>
           </Flex>
-          <div style={{ position: 'absolute', top: '10%', right: '0' }}>
+          <AbsoluteBottomRight>
             <img src="images/heroright.png" style={{ opacity: '0.8', mixBlendMode: 'luminosity' }} alt="img" />
-          </div>
+          </AbsoluteBottomRight>
         </RightContainer>
       </MainContainer>
     </>

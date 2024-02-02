@@ -20,6 +20,8 @@ import {
   WedgeTopLeft,
   WedgeTopRight,
 } from './components/WedgeSvgs'
+import ForthSection from './components/ForthSection'
+import FifthSection from './components/FifthSection'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -28,7 +30,12 @@ const StyledHeroSection = styled(PageSection)`
     padding-top: 48px;
   }
 `
-
+const PageBackground = styled.div`
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  position: relative;
+`
 const Home: React.FC<React.PropsWithChildren> = () => {
   const { theme } = useTheme()
   const HomeSectionContainerStyles = { margin: '0', width: '100%', maxWidth: '968px', padding: '0px 16px' }
@@ -86,8 +93,23 @@ const Home: React.FC<React.PropsWithChildren> = () => {
      
       </StyledHeroSection> */}
       <NewHeroSection />
+      <div style={{ width: '100%', height: '60vh', backgroundColor: '#0A1A11', position: 'relative', zIndex: '90' }} />
+
+      <PageBackground>
+        {/* <div style={{ position: "absolute", zIndex: "20", left: "0", top: "-35%" }}>
+          <img src='images/thirdlefticon.png' style={{ opacity: '0.8', mixBlendMode: 'luminosity' }} alt="img" />
+        </div>
+        <div style={{ position: "absolute", right: "0", top: "-35%" }}>
+          <img src='images/thirdrightmask.png' />
+        </div> */}
+
+        <MetricsSection />
+        <ForthSection />
+        <FifthSection />
+      </PageBackground>
+      {/* <MetricsSection /> */}
       {/* <Hero /> */}
-      <PageSection
+      {/* <PageSection
         innerProps={{ style: { margin: '0', width: '100%' } }}
         containerProps={{
           id: 'home-2',
@@ -95,9 +117,10 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         index={2}
         hasCurvedDivider={false}
       >
-        <MetricsSection />
-      </PageSection>
-      <PageSection
+       
+      </PageSection> */}
+
+      {/* <PageSection
         innerProps={{ style: { ...HomeSectionContainerStyles, maxWidth: 'auto' } }}
         background={theme.colors.background}
         containerProps={{
@@ -112,7 +135,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
           </InnerWedgeWrapper>
         </OuterWedgeWrapper>
         <EcoSystemSection />
-      </PageSection>
+      </PageSection> */}
       <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}
