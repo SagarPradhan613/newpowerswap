@@ -1,5 +1,6 @@
 import { useIsMounted } from "@pancakeswap/hooks";
 import React from "react";
+import styled from "styled-components";
 import { useMatchBreakpoints } from "../../contexts";
 import { Box, Flex } from "../Box";
 import { Link } from "../Link";
@@ -20,6 +21,14 @@ import LangSelector from "../LangSelector/LangSelector";
 import { ArrowForwardIcon, LogoIcon, LogoWithTextIcon } from "../Svg";
 import { ThemeSwitcher } from "../ThemeSwitcher";
 import { FooterProps } from "./types";
+
+const LowerFooter = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
   items,
@@ -55,6 +64,13 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
           alignItems="flex-start"
           mb={["42px", null, "36px"]}
         >
+          <Box pb={["20px", null, null]} style={{ width: "23%" }} display={["none", null, "block"]}>
+            {isXl ? <LogoWithTextIcon width="160px" /> : <LogoWithTextIcon width="160px" />}
+            <p style={{ marginTop: "20px", lineHeight: "30px", color: "white", fontSize: "16px", fontWeight: "500" }}>
+              Lorem ipsum is a placeholder text commonly to the visual form of a document or a typeface. Lorem ipsum is
+              a placeholder text commonly used to the visual form.
+            </p>
+          </Box>
           {items?.map((item) => (
             <StyledList key={item.label}>
               <StyledListItem>{item.label}</StyledListItem>
@@ -78,16 +94,15 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
               ))}
             </StyledList>
           ))}
-          <Box display={["none", null, "block"]}>{isXl ? <LogoIcon /> : <LogoWithTextIcon width="160px" />}</Box>
         </Flex>
         <StyledSocialLinks order={[2]} pb={["42px", null, "32px"]} mb={["0", null, "32px"]} />
         <StyledToolsContainer
           data-theme="dark"
           order={[1, null, 3]}
           flexDirection={["column", null, "row"]}
-          justifyContent="space-between"
+          justifyContent="center"
         >
-          <Flex order={[2, null, 1]} alignItems="center">
+          {/* <Flex order={[2, null, 1]} alignItems="center">
             {isMounted && <ThemeSwitcher isDark={isDark} toggleTheme={toggleTheme} />}
             <LangSelector
               currentLang={currentLang}
@@ -111,8 +126,15 @@ const MenuItem: React.FC<React.PropsWithChildren<FooterProps>> = ({
             >
               {buyCakeLabel}
             </Button>
-          </Flex>
+          </Flex> */}
+          <p style={{ color: "white", opacity: "0.6", fontSize: "16px", fontWeight: "600" }}>
+            @copyright 2024 , all rights received
+          </p>
         </StyledToolsContainer>
+        {/* <LowerFooter>
+         
+
+        </LowerFooter> */}
       </Flex>
     </StyledFooter>
   );

@@ -157,6 +157,8 @@ const floatAnimation = keyframes`
 `
 
 const FloatImgContainer = styled.div`
+  position: relative;
+  z-index: 90;
   animation: ${floatAnimation} 3s ease-in-out infinite;
 `
 const ForthSection = () => {

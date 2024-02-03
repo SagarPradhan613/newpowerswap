@@ -16,6 +16,8 @@ const Tab = styled.button<TabProps>`
   padding: ${getPadding};
   border-radius: ${getBorderRadius};
   font-size: 16px;
+
+  white-space: nowrap;
   font-weight: 600;
 
   ${({ theme }) => theme.mediaQueries.md} {

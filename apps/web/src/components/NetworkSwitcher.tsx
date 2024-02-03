@@ -190,6 +190,7 @@ export const NetworkSwitcher = () => {
     <Box ref={cannotChangeNetwork ? targetRef : null} height="100%">
       {cannotChangeNetwork && tooltipVisible && tooltip}
       <UserMenu
+        style={{ border: '1px solid white', padding: '0 10px', borderRadius: '10px', height: '40px', marginTop: '8px' }}
         mr="8px"
         placement="bottom"
         variant={isLoading ? 'pending' : isWrongNetwork ? 'danger' : 'default'}

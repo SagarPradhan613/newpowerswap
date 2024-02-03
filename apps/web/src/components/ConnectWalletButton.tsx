@@ -37,7 +37,7 @@ const ConnectWalletButton = ({ children, ...props }: ButtonProps) => {
 
   return (
     <>
-      <Button onClick={handleClick} {...props}>
+      <Button style={{ height: '40px', borderRadius: '10px' }} onClick={handleClick} {...props}>
         {children || <Trans>Connect Wallet</Trans>}
       </Button>
       <style jsx global>{`

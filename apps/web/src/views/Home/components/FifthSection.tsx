@@ -50,6 +50,7 @@ const LeftColHeader = styled.p`
 
 const MainContainer = styled.div`
   display: flex;
+  position: relative;
   width: 100%;
 
   @media (max-width: 767px) {
@@ -188,6 +189,29 @@ const CoinContainer3 = styled.div`
   top: 70%;
 `
 
+const AbsoluteIcon = styled.div`
+  position: absolute;
+  right: 0;
+  z-index: 20;
+  @media (max-width: 767px) {
+    top: -105%;
+    width: 60%;
+    display: none;
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    top: -105%;
+    width: 30%;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    top: -200%;
+    width: 300px;
+  }
+`
+
 const FifthSection = () => {
   const { t } = useTranslation()
   const { isMobile, isXs, isMd } = useMatchBreakpoints()
@@ -195,6 +219,10 @@ const FifthSection = () => {
   return (
     <>
       <MainContainer>
+        <AbsoluteIcon>
+          <img style={{ opacity: '0.8', mixBlendMode: 'luminosity' }} src="images/fifthrighticon.png" alt="img" />
+        </AbsoluteIcon>
+
         <MainRight>
           {/* <img src="images/forthright.png"></img> */}
           <div style={{ display: 'flex', position: 'relative', width: '100%' }}>

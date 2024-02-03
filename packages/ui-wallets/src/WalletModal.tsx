@@ -82,9 +82,30 @@ const TabContainer = ({ children, docLink, docText }: PropsWithChildren<{ docLin
   return (
     <AtomBox position="relative" zIndex="modal" className={modalWrapperClass}>
       <AtomBox position="absolute" style={{ top: '-50px' }}>
-        <TabMenu activeIndex={index} onItemClick={setIndex} gap="0px" isColorInverse isShowBorderBottom={false}>
-          <Tab>{t('Connect Wallet')}</Tab>
-          <Tab>{t('What’s a Web3 Wallet?')}</Tab>
+        <TabMenu activeIndex={index} onItemClick={setIndex} gap="10px" isColorInverse isShowBorderBottom={false}>
+          <Tab
+            style={{
+              color: 'white',
+              backgroundColor: '#102C1D',
+              border: '1px solid #0A1A11',
+              fontSize: '15px',
+              minWidth: '100px',
+            }}
+          >
+            {t('Connect Wallet')}
+          </Tab>
+          <Tab
+            style={{
+              color: 'white',
+              backgroundColor: '#102C1D',
+              fontSize: '15px',
+              minWidth: '200px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            {t('What’s a Web3 Wallet?')}
+          </Tab>
         </TabMenu>
       </AtomBox>
       <AtomBox
@@ -328,7 +349,7 @@ function DesktopModal<T>({
         className={desktopWalletSelectionClass}
       >
         <AtomBox px="48px">
-          <Heading color="color" as="h4">
+          <Heading color="white" as="h4">
             {t('Connect Wallet')}
           </Heading>
           <Text color="textSubtle" small pt="24px" pb="32px">
@@ -461,7 +482,13 @@ const Intro = ({ docLink, docText }: { docLink: string; docText: string }) => {
         {t('Haven’t got a wallet yet?')}
       </Heading>
       <Image src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width={198} height={178} />
-      <Button as={LinkExternal} color="backgroundAlt" variant="subtle" href={docLink}>
+      <Button
+        style={{ backgroundColor: '#58FFA4' }}
+        as={LinkExternal}
+        color="backgroundAlt"
+        variant="subtle"
+        href={docLink}
+      >
         {docText}
       </Button>
     </>
