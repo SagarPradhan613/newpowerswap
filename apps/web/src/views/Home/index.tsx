@@ -2,26 +2,19 @@ import { useTranslation } from '@pancakeswap/localization'
 import { Box, Flex, PageSection, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import useTheme from 'hooks/useTheme'
 import { styled } from 'styled-components'
-import MultipleBanner from './components/Banners/MultipleBanner'
 import CakeDataRow from './components/CakeDataRow'
 import CakeSection from './components/CakeSection'
 import CommunitySection from './components/CommunitySection'
 import { RightTopBox } from './components/CommunitySection/ImagesOnBg'
-import EcoSystemSection from './components/EcoSystemSection'
-import Footer from './components/Footer'
-import Hero from './components/Hero'
-import MetricsSection from './components/MetricsSection'
-import { NewsSection } from './components/NewsSection'
-import NewHeroSection from './components/NewHeroSection'
-import {
-  InnerWedgeWrapper,
-  OuterWedgeWrapper,
-  WedgeBottomRight,
-  WedgeTopLeft,
-  WedgeTopRight,
-} from './components/WedgeSvgs'
-import ForthSection from './components/ForthSection'
 import FifthSection from './components/FifthSection'
+import Footer from './components/Footer'
+import ForthSection from './components/ForthSection'
+import MetricsSection from './components/MetricsSection'
+import NewHeroSection from './components/NewHeroSection'
+import SecondSection from './components/SecondSection'
+import { NewsSection } from './components/NewsSection'
+import { InnerWedgeWrapper, OuterWedgeWrapper, WedgeBottomRight, WedgeTopRight } from './components/WedgeSvgs'
+import JoinSection from './components/JoinSection'
 
 const StyledHeroSection = styled(PageSection)`
   padding-top: 16px;
@@ -93,8 +86,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
      
       </StyledHeroSection> */}
       <NewHeroSection />
-      <div style={{ width: '100%', height: '60vh', backgroundColor: '#0A1A11', position: 'relative', zIndex: '90' }} />
-
+      <SecondSection />
       <PageBackground>
         {/* <div style={{ position: "absolute", zIndex: "20", left: "0", top: "-35%" }}>
           <img src='images/thirdlefticon.png' style={{ opacity: '0.8', mixBlendMode: 'luminosity' }} alt="img" />
@@ -106,7 +98,9 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         <MetricsSection />
         <ForthSection />
         <FifthSection />
+        <JoinSection />
       </PageBackground>
+
       {/* <MetricsSection /> */}
       {/* <Hero /> */}
       {/* <PageSection
@@ -136,7 +130,7 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         </OuterWedgeWrapper>
         <EcoSystemSection />
       </PageSection> */}
-      <PageSection
+      {/* <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background={theme.colors.background}
         containerProps={{
@@ -165,8 +159,8 @@ const Home: React.FC<React.PropsWithChildren> = () => {
             <WedgeBottomRight />
           </InnerWedgeWrapper>
         </OuterWedgeWrapper>
-      </PageSection>
-      <PageSection
+      </PageSection> */}
+      {/* <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         containerProps={{
           id: 'home-3',
@@ -176,8 +170,8 @@ const Home: React.FC<React.PropsWithChildren> = () => {
       >
         <RightTopBox />
         <CommunitySection />
-      </PageSection>
-      <PageSection
+      </PageSection> */}
+      {/* <PageSection
         innerProps={{
           style: {
             ...HomeSectionContainerStyles,
@@ -189,15 +183,15 @@ const Home: React.FC<React.PropsWithChildren> = () => {
         hasCurvedDivider={false}
       >
         <NewsSection />
-      </PageSection>
-      <PageSection
+      </PageSection> */}
+      {/* <PageSection
         innerProps={{ style: HomeSectionContainerStyles }}
         background="linear-gradient(180deg, #7645D9 0%, #5121B1 100%)"
         index={2}
         hasCurvedDivider={false}
       >
         <Footer />
-      </PageSection>
+      </PageSection> */}
     </Box>
   )
 }

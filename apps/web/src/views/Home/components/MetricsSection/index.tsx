@@ -162,6 +162,12 @@ const Box = styled.div`
   z-index: 50;
   position: relative;
   background-color: #123922;
+
+  transition: transform 0.7s ease; /* Add transition for smooth scaling */
+
+  &:hover {
+    transform: scale(1.1); /* Scale the button on hover */
+  }
 `
 const ProfileBox = styled.div`
   height: 99px;
@@ -211,6 +217,23 @@ const AbsoluteThirdRightMask = styled.div`
   /* Desktop styles */
   @media (min-width: 1024px) {
     top: -75%;
+  }
+`
+
+const ResponsiveContainer = styled.div`
+  @media (max-width: 767px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
   }
 `
 
@@ -301,14 +324,17 @@ const Stats = () => {
         <AbsoluteThirdRightMask>
           <img src="images/thirdrightmask.png" alt="img" />
         </AbsoluteThirdRightMask>
-        <ColorHeader>Home For Defi</ColorHeader>
-        <WhiteHeader>Used By Millions , Trusted With Billions</WhiteHeader>
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <ThirdMainPara>
-            Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface
-            without relying on meaningful content.
-          </ThirdMainPara>
-        </div>
+        <ResponsiveContainer>
+          <ColorHeader>Home For Defi</ColorHeader>
+          <WhiteHeader>Used By Millions , Trusted With Billions</WhiteHeader>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <ThirdMainPara>
+              Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface
+              without relying on meaningful content.
+            </ThirdMainPara>
+          </div>
+        </ResponsiveContainer>
+
         <BoxContainers>
           <Box>
             <ProfileBox>

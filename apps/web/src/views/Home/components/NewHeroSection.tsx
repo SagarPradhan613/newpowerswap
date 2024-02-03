@@ -30,7 +30,8 @@ const LeftContainer = styled.div`
   /* mobile devices */
   @media (max-width: 767px) {
     width: 100%;
-    padding-left: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-top: 4rem;
   }
 
@@ -57,7 +58,8 @@ const RightContainer = styled.div`
   /* mobile devices */
   @media (max-width: 767px) {
     width: 100%;
-    padding-right: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     padding-bottom: 4rem;
   }
 

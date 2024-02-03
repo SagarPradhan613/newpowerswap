@@ -32,14 +32,28 @@ const StyledNav = styled.nav`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: ${MENU_HEIGHT}px;
+
   background: transparent;
   // background-color: ${({ theme }) => theme.nav.background};
   // border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   transform: translate3d(0, 0, 0);
 
-  padding-left: 16px;
-  padding-right: 16px;
+  @media (max-width: 767px) {
+    height: ${MENU_HEIGHT}px;
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    height: ${MENU_HEIGHT}px;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1200px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 `;
 
 const FixedContainer = styled("div").withConfig({

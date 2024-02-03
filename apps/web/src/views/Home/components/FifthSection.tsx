@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { useTranslation } from '@pancakeswap/localization'
 import { Button, Flex, Link, OpenNewIcon, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { NextLinkFromReactRouter } from '@pancakeswap/widgets-internal'
@@ -81,6 +81,8 @@ const MainLeft = styled.div`
     text-align:center;
     margin-bottom:8rem;
     margin-top:3rem;
+    padding-left:2rem;
+    padding-right:2rem;
   }
 
   /* Tablet styles */
@@ -90,6 +92,8 @@ const MainLeft = styled.div`
     text-align:center;
      margin-bottom:8rem;
     margin-top35rem;
+       padding-left:4rem;
+    padding-right:4rem;
   }
 
   /* Desktop styles */
@@ -137,6 +141,53 @@ const ButtonContainer = styled.div`
   gap: 10px;
   margin-top: 2rem;
 `
+
+const floatAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`
+
+const floatAnimationRe = keyframes`
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+`
+
+const CoinContainer = styled.div`
+  animation: ${floatAnimation} 3s ease-in-out infinite;
+  position: absolute;
+  z-index: 90;
+`
+
+const CoinContainer2 = styled.div`
+  animation: ${floatAnimation} 3s ease-in-out infinite;
+  position: absolute;
+  z-index: 90;
+  left: 270px;
+  top: 43%;
+`
+
+const CoinContainer3 = styled.div`
+  animation: ${floatAnimation} 3s ease-in-out infinite;
+  position: absolute;
+  z-index: 90;
+  left: 440px;
+  top: 70%;
+`
+
 const FifthSection = () => {
   const { t } = useTranslation()
   const { isMobile, isXs, isMd } = useMatchBreakpoints()
@@ -147,15 +198,15 @@ const FifthSection = () => {
         <MainRight>
           {/* <img src="images/forthright.png"></img> */}
           <div style={{ display: 'flex', position: 'relative', width: '100%' }}>
-            <div style={{ position: 'absolute' }}>
-              <img src="images/coinicon.png" alt="img" />
-            </div>
-            <div style={{ position: 'absolute', left: '35%', top: '67%', transform: 'translateY(-50%)' }}>
-              <img src="images/coiniconsec.png" alt="img" />
-            </div>
-            <div style={{ position: 'absolute', left: '63%', top: '80%', transform: 'translateY(-50%)' }}>
-              <img src="images/coiniconthird.png" alt="img" />
-            </div>
+            <CoinContainer>
+              <img src="images/coinicon.png" alt="img" style={{ width: '85%' }} />
+            </CoinContainer>
+            <CoinContainer2 style={{ transform: 'translateY(-50%)' }}>
+              <img src="images/coiniconsec.png" alt="img" style={{ width: '85%' }} />
+            </CoinContainer2>
+            <CoinContainer3 style={{ transform: 'translateY(-50%)' }}>
+              <img src="images/coiniconthird.png" alt="img" style={{ width: '85%' }} />
+            </CoinContainer3>
           </div>
         </MainRight>
         <MainLeft>

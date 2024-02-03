@@ -1,6 +1,6 @@
 import { useTranslation } from '@pancakeswap/localization'
 import { Button, useMatchBreakpoints } from '@pancakeswap/uikit'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 const LeftWhiteHeader = styled.p`
   color: white;
@@ -76,6 +76,8 @@ const MainLeft = styled.div`
     width: 100%;
     align-items: center;
     text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
     margin-bottom: 8rem;
     margin-top: -5rem;
   }
@@ -85,6 +87,8 @@ const MainLeft = styled.div`
     width: 100%;
     align-items: center;
     text-align: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
     margin-bottom: 8rem;
     margin-top: -5rem;
   }
@@ -138,6 +142,22 @@ const AbsoluteForthLeft = styled.div`
   position: absolute;
   top: -100%;
   left: 0;
+`
+
+const floatAnimation = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`
+
+const FloatImgContainer = styled.div`
+  animation: ${floatAnimation} 3s ease-in-out infinite;
 `
 const ForthSection = () => {
   const { t } = useTranslation()
@@ -194,7 +214,9 @@ const ForthSection = () => {
           </ButtonContainer>
         </MainLeft>
         <MainRight>
-          <img src="images/forthright.png" alt="img" />
+          <FloatImgContainer>
+            <img src="images/forthright.png" alt="img" />
+          </FloatImgContainer>
         </MainRight>
       </MainContainer>
     </>
