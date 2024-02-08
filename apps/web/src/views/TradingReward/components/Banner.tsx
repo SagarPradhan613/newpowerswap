@@ -10,7 +10,7 @@ import bunnyImage from '../../../../public/images/trading-reward/trading-reward-
 
 const Container = styled(Box)<{ backgroundColor: string }>`
   padding: 47px 16px 38px 16px;
-  background: ${({ backgroundColor }) => backgroundColor};
+  // background: ${({ backgroundColor }) => backgroundColor};
 `
 
 const Decorations = styled(Box)`

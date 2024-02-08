@@ -87,7 +87,15 @@ export const StepCounter = memo(
 
     return (
       <LightGreyCard padding="0">
-        <AutoColumn py="16px" textAlign="center" gap="8px" width="100%" onFocus={handleOnFocus} onBlur={handleOnBlur}>
+        <AutoColumn
+          style={{ color: "white" }}
+          py="16px"
+          textAlign="center"
+          gap="8px"
+          width="100%"
+          onFocus={handleOnFocus}
+          onBlur={handleOnBlur}
+        >
           {title}
           <AutoRow>
             {!locked && (

@@ -11,6 +11,7 @@ const Card: React.FC<React.PropsWithChildren<CardProps>> = ({
 }) => {
   return (
     <StyledCard {...props}>
+      {/* <StyledCardInner {...innerCardProps} background={background} hasCustomBorder={!!props.borderBackground}> */}
       <StyledCardInner {...innerCardProps} background={background} hasCustomBorder={!!props.borderBackground}>
         {ribbon}
         {children}

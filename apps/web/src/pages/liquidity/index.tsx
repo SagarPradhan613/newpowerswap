@@ -46,7 +46,11 @@ import useAccountActiveChain from 'hooks/useAccountActiveChain'
 import { Liquidity } from '@pancakeswap/widgets-internal'
 
 const Body = styled(CardBody)`
-  background-color: ${({ theme }) => theme.colors.dropdownDeep};
+  // background-color: ${({ theme }) => theme.colors.dropdownDeep};
+  // background-color:#000000;
+  background-image: url(/images/cropedswapinsidebg.png);
+  background-size: cover;
+  backgroound-repeat: no-repeat;
 `
 
 export const StableContextProvider = (props: { pair: LPStablePair; account: string | undefined }) => {
@@ -287,6 +291,9 @@ export default function PoolListPage() {
       <AppBody
         style={{
           maxWidth: '854px',
+          // backgroundImage: "url(/images/swapboxbg.png)",
+          // backgroundSize: "cover",
+          // backgroundRepeat: "no-repeat",
         }}
       >
         <AppHeader

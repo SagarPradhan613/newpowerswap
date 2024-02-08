@@ -31,7 +31,7 @@ const Icon: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
     //     </linearGradient>
     //   </defs>
     // </Svg>
-    <img style={{ marginRight: "10px" }} src="images/powercoin.png" alt="img" />
+    <img style={{ marginRight: "10px" }} src="/images/powercoin.png" alt="img" />
   );
 };
 

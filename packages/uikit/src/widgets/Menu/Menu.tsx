@@ -169,7 +169,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
       >
         <Wrapper>
           <div style={{ position: "absolute", top: "0", left: "0", width: "100%" }}>
-            <img src="images/firstleftmask.png" alt="img" />
+            <img src="/images/firstleftmask.png" alt="img" />
           </div>
           {/* <div style={{ position: "absolute", right: "0", width: "100%" }}>
             <img src="images/firstbottomright.png" style={{ width: "100%" }} alt="img" />

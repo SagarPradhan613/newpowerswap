@@ -49,10 +49,18 @@ import { AprCalculator } from './components/AprCalculator'
 import { useCurrencyParams } from './hooks/useCurrencyParams'
 
 export const BodyWrapper = styled(Card)`
-  border-radius: 24px;
+  border-radius: 50px;
   max-width: 858px;
   width: 100%;
+
+  margin-top: 15rem;
+  margin-bottom: 5rem;
   z-index: 1;
+
+  background-image: url(/images/cropedswapbgnew.png);
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
 `
 
 /* two-column layout where DepositAmount is moved at the very end on mobile. */

@@ -12,7 +12,6 @@ export const MILLION = 1000000;
 export const TRILLION = 1000000000000;
 
 export const RoiCardWrapper = styled(Box)`
-  background: linear-gradient(180deg, #53dee9, #7645d9);
   padding: 1px;
   width: 100%;
   border-radius: ${({ theme }) => theme.radii.default};
@@ -22,7 +21,8 @@ export const RoiCardInner = styled(Box)`
   min-height: 120px;
   padding: 24px;
   border-radius: ${({ theme }) => theme.radii.default};
-  background: ${({ theme }) => theme.colors.gradientBubblegum};
+  // background: ${({ theme }) => theme.colors.gradientBubblegum};
+  background-color: #153a25;
 `;
 
 export const RoiInputContainer = styled(Box)`
