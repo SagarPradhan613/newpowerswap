@@ -27,6 +27,7 @@ const Page: React.FC<
 
   return (
     <Swap.Page
+      style={{ position: 'relative' }}
       removePadding={removePadding}
       noMinHeight={noMinHeight}
       hideFooterOnDesktop={hideFooterOnDesktop}
@@ -35,6 +36,21 @@ const Page: React.FC<
       externalLinkUrl={externalLinkUrl}
       {...props}
     >
+      <div>
+        <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+          <img src="images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+          <img src="images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+          <img src="images/bgmaskbottomright.png" alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+          <img src="images/bgmaskbottomleft.png" alt="bg" />
+        </div>
+      </div>
+
       {children}
     </Swap.Page>
   )

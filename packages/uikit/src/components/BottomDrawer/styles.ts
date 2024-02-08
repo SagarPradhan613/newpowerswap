@@ -23,7 +23,11 @@ export const DrawerContainer = styled.div<{ isUnmounting: boolean }>`
   width: 100%;
   height: 80vh;
   bottom: 0;
-  background-color: ${({ theme }) => theme.colors.backgroundAlt};
+  // background-color: ${({ theme }) => theme.colors.backgroundAlt};
+  background-image: url(/images/swapboxbg.png);
+  background-color: #000000;
+  background-size: cover;
+  background-repeat: no-repeat;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
   position: fixed;

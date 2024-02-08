@@ -16,7 +16,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: ${({ theme }) => theme.colors.background};
+    // background-color: ${({ theme }) => theme.colors.background};
+    background-color:#000000;
+    background-image:url(/images/bodybg.png);
+    background-size: cover;
+    background-position: center;
 
     img {
       height: auto;

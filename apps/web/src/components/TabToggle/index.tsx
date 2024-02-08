@@ -13,7 +13,8 @@ const Wrapper = styled(Flex)`
 
 const Inner = styled(Flex)`
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.colors.input};
+  // background-color: ${({ theme }) => theme.colors.input};
+  background-color: rgba(88, 255, 164, 0.5);
   width: 100%;
 `
 
@@ -51,7 +52,16 @@ interface TabToggleGroupProps {
 export const TabToggleGroup: React.FC<React.PropsWithChildren<TabToggleGroupProps>> = ({ children }) => {
   return (
     <Wrapper p={['0 4px', '0 16px']}>
-      <Inner>{children}</Inner>
+      <Inner
+        style={{
+          backgroundColor: 'transparent',
+          border: '1px solid #58FFA4',
+          borderTopLeftRadius: '50px',
+          borderTopRightRadius: '50px',
+        }}
+      >
+        {children}
+      </Inner>
     </Wrapper>
   )
 }

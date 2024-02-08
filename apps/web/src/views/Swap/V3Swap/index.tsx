@@ -1,6 +1,7 @@
 import { SmartRouter } from '@pancakeswap/smart-router/evm'
 import throttle from 'lodash/throttle'
 import { useMemo } from 'react'
+import styled from 'styled-components'
 import { Box } from '@pancakeswap/uikit'
 
 import { shouldShowMMLiquidityError } from 'views/Swap/MMLinkPools/utils/exchange'
@@ -38,35 +39,52 @@ export function V3SwapForm() {
 
   const insufficientFundCurrency = useCheckInsufficientError(trade)
 
+  const MainSwapCard = styled.div`
+    background-image: url(/images/swapboxbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  `
+
   return (
     <>
-      <FormHeader onRefresh={throttledHandleRefresh} refreshDisabled={!tradeLoaded || syncing || !isStale} />
-      <FormMain
-        tradeLoading={mm.isMMBetter ? false : !tradeLoaded}
-        pricingAndSlippage={<PricingAndSlippage priceLoading={isLoading} price={price} showSlippage={!mm.isMMBetter} />}
-        inputAmount={finalTrade?.inputAmount}
-        outputAmount={finalTrade?.outputAmount}
-        swapCommitButton={
-          mm?.isMMBetter ? (
-            <MMCommitButton {...mm} />
-          ) : (
-            <SwapCommitButton trade={trade} tradeError={error} tradeLoading={!tradeLoaded} />
-          )
-        }
-      />
+      <div
+        style={{
+          backgroundImage: 'url(/images/swapboxbg.png)',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          border: 'none',
+        }}
+      >
+        <FormHeader onRefresh={throttledHandleRefresh} refreshDisabled={!tradeLoaded || syncing || !isStale} />
+        <FormMain
+          tradeLoading={mm.isMMBetter ? false : !tradeLoaded}
+          pricingAndSlippage={
+            <PricingAndSlippage priceLoading={isLoading} price={price} showSlippage={!mm.isMMBetter} />
+          }
+          inputAmount={finalTrade?.inputAmount}
+          outputAmount={finalTrade?.outputAmount}
+          swapCommitButton={
+            mm?.isMMBetter ? (
+              <MMCommitButton {...mm} />
+            ) : (
+              <SwapCommitButton trade={trade} tradeError={error} tradeLoading={!tradeLoaded} />
+            )
+          }
+        />
 
-      <BuyCryptoLink currency={insufficientFundCurrency} />
+        <BuyCryptoLink currency={insufficientFundCurrency} />
 
-      {mm.isMMBetter ? (
-        <MMTradeDetail loaded={!mm.mmOrderBookTrade.isLoading} mmTrade={mm.mmTradeInfo} />
-      ) : (
-        <TradeDetails loaded={tradeLoaded} trade={trade} />
-      )}
-      {(shouldShowMMLiquidityError(mm?.mmOrderBookTrade?.inputError) || mm?.mmRFQTrade?.error) && !trade && (
-        <Box mt="5px">
-          <MMLiquidityWarning />
-        </Box>
-      )}
+        {mm.isMMBetter ? (
+          <MMTradeDetail loaded={!mm.mmOrderBookTrade.isLoading} mmTrade={mm.mmTradeInfo} />
+        ) : (
+          <TradeDetails loaded={tradeLoaded} trade={trade} />
+        )}
+        {(shouldShowMMLiquidityError(mm?.mmOrderBookTrade?.inputError) || mm?.mmRFQTrade?.error) && !trade && (
+          <Box mt="5px">
+            <MMLiquidityWarning />
+          </Box>
+        )}
+      </div>
     </>
   )
 }

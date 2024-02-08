@@ -9,6 +9,7 @@ const MainContainer = styled.div`
   display: flex;
   background-color: #07130c;
   position: relative;
+  padding-top: 10rem;
 
   /* mobile devices */
   @media (max-width: 767px) {

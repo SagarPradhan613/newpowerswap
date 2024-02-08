@@ -13,7 +13,10 @@ export const TableWrapper = styled(Flex)`
   padding-top: 16px;
   flex-direction: column;
   gap: 16px;
-  background-color: ${({ theme }) => theme.card.background};
+  background-image: url(/images/cropedswapinsidebg.png);
+  background-size: cover;
+  backgroound-repeat: no-repeat;
+  // background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: ${({ theme }) => theme.radii.card};
   ${({ theme }) => theme.mediaQueries.md} {

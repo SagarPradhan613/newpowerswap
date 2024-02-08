@@ -6,8 +6,10 @@ export const SubMenuItemWrapper = styled(Flex)<{ $isMobileOnly: boolean }>`
     ${({ $isMobileOnly }) => ($isMobileOnly ? "display:none" : "")};
   }
   width: 100%;
+  margin-top: 190px;
   overflow: hidden;
   position: relative;
+  z-index: 90;
 `;
 const StyledSubMenuItems = styled(Flex)`
   position: relative;

@@ -70,7 +70,12 @@ const TableRowWrapper = styled(Flex)`
   width: 100%;
   flex-direction: column;
   gap: 16px;
-  background-color: ${({ theme }) => theme.card.background};
+  background: transparent;
+  // background-image:url(/images/swapboxbg.png);
+  // background-color:#000000;
+  // background-size:cover;
+  // background-repeat:no-repeat;
+  // background-color: ${({ theme }) => theme.card.background};
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
 
   @media screen and (max-width: 575px) {

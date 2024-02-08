@@ -27,24 +27,30 @@ const Wrapper = styled.div`
 
 const StyledNav = styled.nav`
   position: relative;
-  z-index: 50;
+  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 
-  background: transparent;
+  background: linear-gradient(to right, #163f28, #050f09);
   // background-color: ${({ theme }) => theme.nav.background};
   // border-bottom: 1px solid ${({ theme }) => theme.colors.cardBorder};
   transform: translate3d(0, 0, 0);
 
   @media (max-width: 767px) {
-    height: ${MENU_HEIGHT}px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   /* Tablet styles */
   @media (min-width: 768px) and (max-width: 1023px) {
-    height: ${MENU_HEIGHT}px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 
   /* Desktop styles */
@@ -63,9 +69,9 @@ const FixedContainer = styled("div").withConfig({
   top: ${({ showMenu, height }) => (showMenu ? 0 : `-${height}px`)};
   left: 0;
   transition: top 0.2s;
-  height: ${({ height }) => `${height}px`};
+  // height: ${({ height }) => `${height}px`};
   width: 100%;
-  z-index: 20;
+  z-index: 100;
 `;
 
 const TopBannerContainer = styled.div<{ height: number }>`
@@ -165,36 +171,36 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
           <div style={{ position: "absolute", top: "0", left: "0", width: "100%" }}>
             <img src="images/firstleftmask.png" alt="img" />
           </div>
-          <div style={{ position: "absolute", right: "0", width: "100%" }}>
+          {/* <div style={{ position: "absolute", right: "0", width: "100%" }}>
             <img src="images/firstbottomright.png" style={{ width: "100%" }} alt="img" />
-          </div>
-          {/* <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}> */}
-          {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
-          <StyledNav>
-            <Flex>
-              <Logo href={homeLink?.href ?? "/"} />
-              <AtomBox display={{ xs: "none", md: "block" }}>
-                <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
-              </AtomBox>
-            </Flex>
-            <Flex alignItems="center" height="100%">
-              <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
-                <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
-              </AtomBox>
-              <Box mt="4px">
-                <LangSelector
-                  currentLang={currentLang}
-                  langs={langs}
-                  setLang={setLang}
-                  buttonScale="xs"
-                  color="textSubtle"
-                  hideLanguage
-                />
-              </Box>
-              {rightSide}
-            </Flex>
-          </StyledNav>
-          {/* </FixedContainer> */}
+          </div> */}
+          <FixedContainer showMenu={showMenu} height={totalTopMenuHeight}>
+            {banner && isMounted && <TopBannerContainer height={topBannerHeight}>{banner}</TopBannerContainer>}
+            <StyledNav>
+              <Flex>
+                <Logo href={homeLink?.href ?? "/"} />
+                <AtomBox display={{ xs: "none", md: "block" }}>
+                  <MenuItems items={links} activeItem={activeItem} activeSubItem={activeSubItem} ml="24px" />
+                </AtomBox>
+              </Flex>
+              <Flex alignItems="center" height="100%">
+                <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
+                  <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
+                </AtomBox>
+                <Box mt="4px">
+                  <LangSelector
+                    currentLang={currentLang}
+                    langs={langs}
+                    setLang={setLang}
+                    buttonScale="xs"
+                    color="textSubtle"
+                    hideLanguage
+                  />
+                </Box>
+                {rightSide}
+              </Flex>
+            </StyledNav>
+          </FixedContainer>
           {subLinks ? (
             <Flex justifyContent="space-around" overflow="hidden">
               <SubMenuItems

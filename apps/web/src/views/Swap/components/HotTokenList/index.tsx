@@ -1,6 +1,6 @@
+import { ChainId } from '@pancakeswap/chains'
 import { useTranslation } from '@pancakeswap/localization'
 import { Currency } from '@pancakeswap/sdk'
-import { ChainId } from '@pancakeswap/chains'
 import { ButtonMenu, ButtonMenuItem, Checkbox, Flex, Text, useMatchBreakpoints } from '@pancakeswap/uikit'
 import { useActiveChainId } from 'hooks/useActiveChainId'
 import { useRouter } from 'next/router'
@@ -15,7 +15,7 @@ import TokenTable from './SwapTokenTable'
 import { useTokenHighLightList } from './useList'
 
 const StyledFlex = styled(Flex)`
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  // border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   overflow: hidden;
   border-radius: 32px;
   > div:first-child {
@@ -29,12 +29,15 @@ const StyledFlex = styled(Flex)`
 
 const StyledTabToggle = styled(TabToggle)`
   cursor: pointer;
+  
   background-color: ${({ theme, isActive }) =>
-    isActive ? (theme.isDark ? 'rgb(45,48,72)' : '#ffffff') : 'transparent'};
+    isActive ? (theme.isDark ? 'rgb(45,48,72)' : '#58FFA4') : 'transparent'};
   ${({ theme }) => theme.mediaQueries.sm} {
     background-color: ${({ theme, isActive }) =>
-      isActive ? (theme.isDark ? 'rgb(45,48,72)' : '#f4fdff') : 'transparent'};
+      isActive ? (theme.isDark ? 'rgb(45,48,72)' : '#58FFA4') : 'transparent'};
   }
+  color: ${({ theme, isActive }) => (isActive ? (theme.isDark ? 'black' : 'black') : 'white')};
+};
 `
 
 const Wrapper = styled.div`
@@ -128,7 +131,7 @@ const HotTokenList: React.FC<{ handleOutputSelect: (newCurrencyOutput: Currency)
 
   const { t } = useTranslation()
   return (
-    <StyledFlex flexDirection="column">
+    <StyledFlex style={{ border: 'none' }} flexDirection="column">
       <TabToggleGroup>
         <StyledTabToggle isActive={dataSource === DataSourceType.V3} onClick={() => setDataSource(DataSourceType.V3)}>
           {t('V3')}
@@ -137,7 +140,14 @@ const HotTokenList: React.FC<{ handleOutputSelect: (newCurrencyOutput: Currency)
           {t('V2')}
         </StyledTabToggle>
       </TabToggleGroup>
-      <Wrapper>
+      <Wrapper
+        style={{
+          backgroundImage: 'url(/images/cropedswapbgnew.png)',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#000000',
+        }}
+      >
         <MenuWrapper>
           <ButtonMenu activeIndex={index} onItemClick={setIndex} fullWidth scale="sm" variant="subtle">
             <ButtonMenuItem>{chainId === ChainId.BSC ? t('Price Change') : t('Liquidity')}</ButtonMenuItem>
