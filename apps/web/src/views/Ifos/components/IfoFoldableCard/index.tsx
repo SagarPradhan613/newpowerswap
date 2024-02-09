@@ -177,7 +177,7 @@ export const IfoCurrentCard = ({
                       </div>
                     </div>
 
-                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                    <div style={{ marginLeft: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                       <div>
                         <p style={{ color: 'black', fontWeight: '600', fontSize: '25px' }}>
                           <span style={{ color: 'black', fontWeight: '600', fontSize: '40px' }}>Sale</span> Coming Soon
