@@ -69,7 +69,21 @@ const StyledCard = styled(Card)<{ $isCurrent?: boolean }>`
     }
   }
 `
+const Hide = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
 
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: none;
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    display: block;
+  }
+`
 const Header = styled(CardHeader)<{ ifoId: string; $isCurrent?: boolean }>`
   display: flex;
   justify-content: flex-end;
@@ -80,8 +94,10 @@ const Header = styled(CardHeader)<{ ifoId: string; $isCurrent?: boolean }>`
   background-position: center;
   border-top-left-radius: 32px;
   border-top-right-radius: 32px;
-  background-color: ${({ theme }) => theme.colors.dropdown};
-  background-image: ${({ ifoId }) => `url('${getBannerUrl(ifoId)}')`};
+  // background-color: ${({ theme }) => theme.colors.dropdown};
+  // background-image: ${({ ifoId }) => `url('${getBannerUrl(ifoId)}')`};
+  background-image: url(/images/ifobanner.png);
+  background-color: white;
   ${({ theme }) => theme.mediaQueries.md} {
     height: 112px;
   }
@@ -126,6 +142,7 @@ export const IfoCurrentCard = ({
           maxWidth={['400px', '400px', '400px', '100%']}
         >
           <Header $isCurrent ifoId={ifo.id} />
+
           <IfoRibbon ifoId={ifo.id} publicIfoData={publicIfoData} ifoChainId={ifo.chainId} />
         </Box>
       )}
@@ -133,7 +150,43 @@ export const IfoCurrentCard = ({
         <StyledCard $isCurrent>
           {!isMobile && (
             <>
-              <Header $isCurrent ifoId={ifo.id} />
+              <Header $isCurrent ifoId={ifo.id}>
+                <Hide>
+                  <div
+                    style={{ width: '100%', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <img src="/images/powerswapimg.png" style={{ height: '80px', width: '80px' }} alt="powerswap" />
+                      </div>
+                      <div style={{ marginLeft: '10px' }}>
+                        <p style={{ color: 'black', fontWeight: '600', fontSize: '40px' }}>
+                          <span style={{ color: '#4CEC95' }}>Power</span> Swap IFO
+                        </p>
+                        <p
+                          style={{
+                            marginTop: '5px',
+                            color: 'black',
+                            fontSize: '15px',
+                            fontWeight: '600',
+                            opacity: '0.5',
+                          }}
+                        >
+                          Initial Farm Offering
+                        </p>
+                      </div>
+                    </div>
+
+                    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                      <div>
+                        <p style={{ color: 'black', fontWeight: '600', fontSize: '25px' }}>
+                          <span style={{ color: 'black', fontWeight: '600', fontSize: '40px' }}>Sale</span> Coming Soon
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </Hide>
+              </Header>
               <IfoRibbon ifoId={ifo.id} publicIfoData={publicIfoData} ifoChainId={ifo.chainId} />
             </>
           )}

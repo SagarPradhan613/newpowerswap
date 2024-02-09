@@ -34,13 +34,29 @@ export const InfoPageLayout = ({ children }) => {
 
   return (
     <>
-      <SubMenuItems
-        items={subMenuItems}
-        activeItem={isStableSwap ? `/info${chainPath}?type=stableSwap` : `/info${chainPath}`}
-      />
+      <div style={{ marginTop: '-11rem' }}>
+        <div>
+          {/* <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+          <img src="/images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+        </div> */}
+          <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+            <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+          </div>
+          <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+            <img src="/images/bgmaskbottomright.png" alt="bg" />
+          </div>
+          <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+            <img src="/images/bgmaskbottomleft.png" alt="bg" />
+          </div>
+        </div>
+        <SubMenuItems
+          items={subMenuItems}
+          activeItem={isStableSwap ? `/info${chainPath}?type=stableSwap` : `/info${chainPath}`}
+        />
 
-      <InfoNav isStableSwap={isStableSwap} />
-      {children}
+        <InfoNav isStableSwap={isStableSwap} />
+        {children}
+      </div>
     </>
   )
 }
