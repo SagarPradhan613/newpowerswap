@@ -214,7 +214,7 @@ const FixedStakingRow = ({ pool, stakedPositions }: { pool: PoolGroup; stakedPos
                   setSelectedPeriodIndex(index)
                 }}
                 scale="sm"
-                variant="subtle"
+                variant="primary"
               >
                 {pool.pools.map((p, index) => (
                   <ButtonMenuItem width="48px" key={p.lockPeriod}>

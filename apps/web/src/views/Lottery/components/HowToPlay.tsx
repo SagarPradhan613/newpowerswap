@@ -42,7 +42,8 @@ const StyledStepCard = styled(Box)`
   display: flex;
   align-self: baseline;
   position: relative;
-  background: ${({ theme }) => theme.colors.cardBorder};
+  // background: ${({ theme }) => theme.colors.cardBorder};
+
   padding: 1px 1px 3px 1px;
   border-radius: ${({ theme }) => theme.radii.card};
 `
@@ -50,7 +51,10 @@ const StyledStepCard = styled(Box)`
 const StepCardInner = styled(Box)`
   width: 100%;
   padding: 24px;
-  background: ${({ theme }) => theme.card.background};
+  // background: ${({ theme }) => theme.card.background};
+  background-image: url(/images/bgmask.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: ${({ theme }) => theme.radii.card};
 `
 
@@ -180,31 +184,31 @@ const PoolAllocations = () => {
           </Text>
         </Flex>
         <AllocationGrid>
-          <AllocationMatch color="#FFE362" text={t('Matches first %digits%', { digits: 1 })} />
+          <AllocationMatch color="#FDFDFD" text={t('Matches first %digits%', { digits: 1 })} />
           <Text textAlign="right" bold>
             2%
           </Text>
-          <AllocationMatch color="#85C54E" text={t('Matches first %digits%', { digits: 2 })} />
+          <AllocationMatch color="#E8FFF3" text={t('Matches first %digits%', { digits: 2 })} />
           <Text textAlign="right" bold>
             3%
           </Text>
-          <AllocationMatch color="#028E75" text={t('Matches first %digits%', { digits: 3 })} />
+          <AllocationMatch color="#CEFFE5" text={t('Matches first %digits%', { digits: 3 })} />
           <Text textAlign="right" bold>
             5%
           </Text>
-          <AllocationMatch color="#36E8F5" text={t('Matches first %digits%', { digits: 4 })} />
+          <AllocationMatch color="#B0FFD4" text={t('Matches first %digits%', { digits: 4 })} />
           <Text textAlign="right" bold>
             10%
           </Text>
-          <AllocationMatch color="#A881FC" text={t('Matches first %digits%', { digits: 5 })} />
+          <AllocationMatch color="#4FFF9F" text={t('Matches first %digits%', { digits: 5 })} />
           <Text textAlign="right" bold>
             20%
           </Text>
-          <AllocationMatch color="#D750B2" text={t('Matches all 6')} />
+          <AllocationMatch color="#14FA7D" text={t('Matches all 6')} />
           <Text textAlign="right" bold>
             40%
           </Text>
-          <AllocationMatch color="#BDC2C4" text={t('Burn Pool')} />
+          <AllocationMatch color="#81FFBA" text={t('Burn Pool')} />
           <Text textAlign="right" bold>
             20%
           </Text>
@@ -343,8 +347,8 @@ const HowToPlay: React.FC<React.PropsWithChildren> = () => {
           <PoolAllocations />
         </Flex>
       </GappedFlex>
-      <Divider />
-      <Flex justifyContent="center" alignItems="center" flexDirection={['column', 'column', 'row']}>
+      {/* <Divider /> */}
+      {/* <Flex justifyContent="center" alignItems="center" flexDirection={['column', 'column', 'row']}>
         <Image width={240} height={172} src="/images/lottery/tombola.png" alt="tombola bunny" mr="8px" mb="16px" />
         <Flex maxWidth="300px" flexDirection="column">
           <Heading mb="16px" scale="md">
@@ -357,7 +361,7 @@ const HowToPlay: React.FC<React.PropsWithChildren> = () => {
             </InlineLink>
           </Text>
         </Flex>
-      </Flex>
+      </Flex> */}
     </Box>
   )
 }

@@ -149,7 +149,7 @@ const HotTokenList: React.FC<{ handleOutputSelect: (newCurrencyOutput: Currency)
         }}
       >
         <MenuWrapper>
-          <ButtonMenu activeIndex={index} onItemClick={setIndex} fullWidth scale="sm" variant="subtle">
+          <ButtonMenu activeIndex={index} onItemClick={setIndex} fullWidth scale="sm" variant="primary">
             <ButtonMenuItem>{chainId === ChainId.BSC ? t('Price Change') : t('Liquidity')}</ButtonMenuItem>
             <ButtonMenuItem>{t('Volume (24H)')}</ButtonMenuItem>
           </ButtonMenu>

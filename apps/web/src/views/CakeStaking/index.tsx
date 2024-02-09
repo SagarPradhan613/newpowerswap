@@ -30,6 +30,16 @@ const CakeStaking = () => {
       <ModalV2 isOpen={cakeRewardModalVisible} closeOnOverlayClick onDismiss={() => setCakeRewardModalVisible(false)}>
         <CakeRewardsCard onDismiss={() => setCakeRewardModalVisible(false)} />
       </ModalV2>
+
+      <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+        <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+        <img src="/images/bgmaskbottomright.png" alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+        <img src="/images/bgmaskbottomleft.png" alt="bg" />
+      </div>
       <StyledPageHeader background={isMobile ? theme.colors.gradientInverseBubblegum : undefined}>
         <PageHead />
         <LockCake />

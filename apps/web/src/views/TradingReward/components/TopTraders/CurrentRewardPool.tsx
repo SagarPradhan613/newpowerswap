@@ -19,7 +19,10 @@ const Container = styled(Flex)`
   margin: auto;
   flex-direction: column;
   border-radius: 32px;
-  background: linear-gradient(33.75deg, #6c56c0 -1.75%, #717be1 89.48%);
+  // background: linear-gradient(33.75deg, #6c56c0 -1.75%, #717be1 89.48%);
+  background-image: url(/images/cropedswapbgnew.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   z-index: 1;
 
   ${({ theme }) => theme.mediaQueries.xxl} {

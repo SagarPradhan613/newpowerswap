@@ -146,6 +146,7 @@ function PositionPriceSection({
       <AutoRow mb="8px">
         <Flex alignItems="center" justifyContent="space-between" width="100%" flexWrap={['wrap', 'wrap', 'nowrap']}>
           <RangePriceSection
+            style={{ color: 'white' }}
             mr={['0', '0', '16px']}
             mb={['8px', '8px', '0']}
             title={t('Min Price')}
@@ -155,6 +156,7 @@ function PositionPriceSection({
           />
           {isMobile ? null : <SyncAltIcon width="24px" mx="16px" />}
           <RangePriceSection
+            style={{ color: 'white' }}
             ml={['0', '0', '16px']}
             title={t('Max Price')}
             price={formatTickPrice(priceUpper, tickAtLimit, Bound.UPPER, locale)}

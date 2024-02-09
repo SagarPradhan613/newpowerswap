@@ -72,6 +72,9 @@ export const StyledActionPanel = styled.div<{ expanded: boolean }>`
         `};
   overflow: hidden;
   background: ${({ theme }) => theme.colors.dropdown};
+  background-image: url(/images/croppedrowmaskbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;

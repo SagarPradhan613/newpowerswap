@@ -85,7 +85,7 @@ const Header: React.FC<React.PropsWithChildren<HeaderProps>> = ({ activeTab, set
         </Button>
       </Flex>
       <ButtonMenuContainer>
-        <ButtonMenu activeIndex={activeTab} scale="sm" variant="subtle" onItemClick={switchTab}>
+        <ButtonMenu activeIndex={activeTab} scale="sm" variant="primary" onItemClick={switchTab}>
           <ButtonMenuItem>{t('Rounds')}</ButtonMenuItem>
           <ButtonMenuItem>{t('PNL')}</ButtonMenuItem>
         </ButtonMenu>

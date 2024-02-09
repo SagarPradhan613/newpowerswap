@@ -86,6 +86,10 @@ const CellInner = styled.div`
 
 const StyledTr = styled.tr`
   cursor: pointer;
+  background-image: url(/images/croppedrowmaskbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
   &:not(:last-child) {
     border-bottom: 2px solid ${({ theme }) => theme.colors.disabled};
   }

@@ -140,6 +140,7 @@ export const PositionPreview = ({
         <RowBetween>
           <RangePriceSection
             width="48%"
+            style={{ color: 'white' }}
             title={t('Min Price')}
             currency0={quoteCurrency}
             currency1={baseCurrency}
@@ -147,6 +148,7 @@ export const PositionPreview = ({
           />
           <RangePriceSection
             width="48%"
+            style={{ color: 'white' }}
             title={t('Max Price')}
             currency0={quoteCurrency}
             currency1={baseCurrency}

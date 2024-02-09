@@ -54,10 +54,26 @@ export const IfoPageLayout = ({ children }) => {
   )
 
   return (
-    <IfoProvider>
-      <SubMenuItems items={subMenuItems} activeItem={isExact ? '/ifo' : '/ifo/history'} />
-      <Hero />
-      {children}
-    </IfoProvider>
+    <>
+      <div>
+        <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+          <img src="/images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+          <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+          <img src="/images/bgmaskbottomright.png" alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+          <img src="/images/bgmaskbottomleft.png" alt="bg" />
+        </div>
+      </div>
+      <IfoProvider>
+        <SubMenuItems items={subMenuItems} activeItem={isExact ? '/ifo' : '/ifo/history'} />
+        <Hero />
+        {children}
+      </IfoProvider>
+    </>
   )
 }

@@ -46,7 +46,10 @@ const { FarmV3HarvestAction } = FarmWidget.FarmV3Table
 
 export const ActionContainer = styled(Flex)`
   width: 100%;
-  border: 2px solid ${({ theme }) => theme.colors.input};
+  // border: 2px solid ${({ theme }) => theme.colors.input};
+  background-image: url(/images/dropdowncontentbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 16px;
   flex-grow: 1;
   flex-basis: 0;

@@ -50,7 +50,7 @@ const Body = styled(CardBody)`
   // background-color:#000000;
   background-image: url(/images/cropedswapinsidebg.png);
   background-size: cover;
-  backgroound-repeat: no-repeat;
+  background-repeat: no-repeat;
 `
 
 export const StableContextProvider = (props: { pair: LPStablePair; account: string | undefined }) => {
@@ -324,7 +324,7 @@ export default function PoolListPage() {
                 scale="sm"
                 activeIndex={selectedTypeIndex}
                 onItemClick={(index) => setSelectedTypeIndex(index)}
-                variant="subtle"
+                variant="primary"
               >
                 <ButtonMenuItem>{t('All')}</ButtonMenuItem>
                 <ButtonMenuItem>V3</ButtonMenuItem>

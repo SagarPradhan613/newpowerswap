@@ -74,7 +74,7 @@ const PoolTabButtons = ({
 
   const liveOrFinishedSwitch = (
     <Wrapper>
-      <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="subtle">
+      <ButtonMenu activeIndex={isExact ? 0 : 1} scale="sm" variant="primary">
         <ButtonMenuItem as={NextLinkFromReactRouter} to="/pools" replace>
           {t("Live")}
         </ButtonMenuItem>

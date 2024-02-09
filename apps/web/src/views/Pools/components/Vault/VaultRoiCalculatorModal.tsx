@@ -92,7 +92,7 @@ export const VaultRoiCalculatorModal = ({
             mb="24px"
             fullWidth
             scale="sm"
-            variant="subtle"
+            variant="primary"
             activeIndex={cakeVaultView}
             onItemClick={setCakeVaultView}
           >

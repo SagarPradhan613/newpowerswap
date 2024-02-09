@@ -64,7 +64,7 @@ export const NotificationsTabButton: React.FC<React.PropsWithChildren<FarmTabBut
             setActiveIndex(index)
           }}
           scale="sm"
-          variant="subtle"
+          variant="primary"
         >
           <ButtonMenuItem>{t('Latest')}</ButtonMenuItem>
           <ButtonMenuItem>{t('Archived')}</ButtonMenuItem>

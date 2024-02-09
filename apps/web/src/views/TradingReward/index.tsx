@@ -72,33 +72,49 @@ const TradingReward = () => {
   }
 
   return (
-    <Box>
-      <SubMenu />
-      <Banner />
-      <YourTradingReward
-        isFetching={isFetching}
-        incentives={currentUserIncentive}
-        qualification={allTradingRewardPairData.qualification}
-        campaignIds={allTradingRewardPairData.campaignIds}
-        campaignIdsIncentive={allTradingRewardPairData.campaignIdsIncentive}
-        rewardInfo={allTradingRewardPairData.rewardInfo}
-        currentUserCampaignInfo={currentUserCampaignInfo}
-        totalAvailableClaimData={totalAvailableClaimData}
-      />
-      <CurrentRewardPool
-        campaignId={campaignId}
-        incentives={currentUserIncentive}
-        campaignInfoData={campaignInfoData}
-        rewardInfo={allTradingRewardPairData.rewardInfo}
-      />
-      <HowToEarn />
-      <RewardsBreakdown
-        allUserCampaignInfo={allUserCampaignInfo}
-        allTradingRewardPairData={allTradingRewardPairData}
-        campaignPairs={allTradingRewardPairData.campaignPairs}
-      />
-      <Questions />
-    </Box>
+    <>
+      <div>
+        <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+          <img src="/images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+          <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+          <img src="/images/bgmaskbottomright.png" alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+          <img src="/images/bgmaskbottomleft.png" alt="bg" />
+        </div>
+      </div>
+      <Box style={{ marginTop: '-10rem' }}>
+        <SubMenu />
+        <Banner />
+        <YourTradingReward
+          isFetching={isFetching}
+          incentives={currentUserIncentive}
+          qualification={allTradingRewardPairData.qualification}
+          campaignIds={allTradingRewardPairData.campaignIds}
+          campaignIdsIncentive={allTradingRewardPairData.campaignIdsIncentive}
+          rewardInfo={allTradingRewardPairData.rewardInfo}
+          currentUserCampaignInfo={currentUserCampaignInfo}
+          totalAvailableClaimData={totalAvailableClaimData}
+        />
+        <CurrentRewardPool
+          campaignId={campaignId}
+          incentives={currentUserIncentive}
+          campaignInfoData={campaignInfoData}
+          rewardInfo={allTradingRewardPairData.rewardInfo}
+        />
+        <HowToEarn />
+        <RewardsBreakdown
+          allUserCampaignInfo={allUserCampaignInfo}
+          allTradingRewardPairData={allTradingRewardPairData}
+          campaignPairs={allTradingRewardPairData.campaignPairs}
+        />
+        <Questions />
+      </Box>
+    </>
   )
 }
 

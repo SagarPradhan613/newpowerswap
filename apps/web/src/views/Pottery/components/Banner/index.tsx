@@ -17,8 +17,11 @@ const PotteryBanner = styled(Flex)`
   position: relative;
   overflow: hidden;
   padding: 64px 0 75px 0;
-  background: linear-gradient(180deg, #ffd800 0%, #fdab32 100%);
-
+  // background: linear-gradient(180deg, #ffd800 0%, #fdab32 100%);
+  // background-image:url(/images/bgmask.png);
+  // background-repeat:no-repeat;
+  // background-size:cover;
+  background: transparent;
   ${({ theme }) => theme.mediaQueries.md} {
     padding: 87px 0 148px 0;
   }
@@ -82,7 +85,7 @@ const Banner: React.FC<React.PropsWithChildren<BannerProps>> = ({ handleScroll }
 
   return (
     <PotteryBanner>
-      <Decorations />
+      {/* <Decorations /> */}
       <TicketsDecorations />
       <Flex
         margin="auto"

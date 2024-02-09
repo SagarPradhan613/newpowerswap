@@ -31,7 +31,7 @@ export const LiveSwitch = memo(function LiveSwitch({ notifyFinished }: Props) {
       <ButtonMenu
         activeIndex={status === PositionManagerStatus.LIVE ? 0 : 1}
         scale="sm"
-        variant="subtle"
+        variant="primary"
         onItemClick={onItemClick}
       >
         <ButtonMenuItem>{t('Live')}</ButtonMenuItem>

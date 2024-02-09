@@ -92,6 +92,20 @@ const AffiliatesBanner = () => {
 
   return (
     <>
+      <div>
+        <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+          <img src="/images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+          <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+          <img src="/images/bgmaskbottomright.png" alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+          <img src="/images/bgmaskbottomleft.png" alt="bg" />
+        </div>
+      </div>
       <style jsx global>
         {`
           #home-1 .page-bg {
@@ -123,25 +137,18 @@ const AffiliatesBanner = () => {
           }
         `}
       </style>
-      <StyledBannerSection
-        innerProps={{ style: { margin: '0', width: '100%' } }}
-        containerProps={{
-          id: 'home-1',
-        }}
-        index={2}
-        hasCurvedDivider={false}
-      >
+      <StyledBannerSection innerProps={{ style: { margin: '0', width: '100%' } }} index={2} hasCurvedDivider={false}>
         <Decorations>
           <img src="/images/affiliates-program/bobbing-1.png" width="155px" height="170px" alt="bobbing-1" />
           <img src="/images/affiliates-program/bobbing-2.png" width="240px" height="187px" alt="bobbing-2" />
           <img src="/images/affiliates-program/bobbing-3.png" width="160px" height="124px" alt="bobbing-3" />
         </Decorations>
-        <BgWrapper>
+        {/* <BgWrapper>
           <InnerWrapper>
             <SlideSvgDark className="slide-svg-dark" width="100%" />
             <SlideSvgLight className="slide-svg-light" width="100%" />
           </InnerWrapper>
-        </BgWrapper>
+        </BgWrapper> */}
         <Flex flexDirection={['column', 'column', 'column', 'row']}>
           <Box
             m={['auto', 'auto', 'auto', '0']}

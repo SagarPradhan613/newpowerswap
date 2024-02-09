@@ -68,7 +68,7 @@ const ReviewStage: React.FC<React.PropsWithChildren<ReviewStageProps>> = ({
             activeIndex={paymentCurrency}
             onItemClick={(index) => setPaymentCurrency(index)}
             scale="sm"
-            variant="subtle"
+            variant="primary"
           >
             <ButtonMenuItem>BNB</ButtonMenuItem>
             <ButtonMenuItem>WBNB</ButtonMenuItem>

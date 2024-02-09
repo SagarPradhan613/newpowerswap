@@ -265,13 +265,17 @@ const Hero = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <ButtonWrapper>
+        {/* <ButtonWrapper>
           <StyledBuyTicketButton disabled={ticketBuyIsDisabled} themeMode="light" />
-        </ButtonWrapper>
+        </ButtonWrapper> */}
         <TicketSvgWrapper>
           <TicketPurchaseCard width="100%" />
         </TicketSvgWrapper>
       </TicketContainer>
+
+      {/* <div>
+      <img src="/images/lowticket.png" style={{ height: '100%' }} alt="bg" />
+      </div> */}
     </Flex>
   )
 }

@@ -15,7 +15,7 @@ const StyledBackground = styled(Flex)<{ showBackgroundColor: boolean }>`
   flex-direction: column;
   padding-top: 48px;
   margin-bottom: 48px;
-  background: ${({ showBackgroundColor }) => (showBackgroundColor ? BACKGROUND_COLOR : '')};
+  // background: ${({ showBackgroundColor }) => (showBackgroundColor ? BACKGROUND_COLOR : '')};
   z-index: 0;
 
   ${({ theme }) => theme.mediaQueries.lg} {
@@ -123,7 +123,11 @@ const BaseContainer = styled(Flex)<{ showBackgroundColor: boolean }>`
   flex-direction: column;
   align-items: center;
   padding: 24px;
-  background: ${({ theme, showBackgroundColor }) => (showBackgroundColor ? theme.card.background : BACKGROUND_COLOR)};
+  background-image: url(/images/cropedswapbgnew.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background: ${({ theme, showBackgroundColor }) =>
+    showBackgroundColor ? theme.card.background : BACKGROUND_COLOR};
 
   ${({ theme }) => theme.mediaQueries.lg} {
     padding: 48px 0;

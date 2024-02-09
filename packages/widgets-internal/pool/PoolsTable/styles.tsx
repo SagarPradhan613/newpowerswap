@@ -4,7 +4,10 @@ import { Flex } from "@pancakeswap/uikit";
 export const ActionContainer = styled(Flex)`
   flex-direction: column;
   padding: 16px;
-  border: 2px solid ${({ theme }) => theme.colors.input};
+  // border: 2px solid ${({ theme }) => theme.colors.input};
+  background-image:url(/images/dropdowncontentbg.png);
+  background-size:cover;
+  background-repeat:no-repeat;
   border-radius: 16px;
   margin-bottom: 16px;
 

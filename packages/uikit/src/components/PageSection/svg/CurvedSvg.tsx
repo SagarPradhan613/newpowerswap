@@ -38,19 +38,19 @@ const ConvexContainer = styled(Box)<ContainerProps>`
 `;
 
 export const ConvexTop: React.FC<React.PropsWithChildren<CurveProps>> = ({ clipFill }) => (
-  <ConvexContainer clipFill={clipFill} clipPath="#topConvexCurve">
-    <svg width="0" height="0">
+  <ConvexContainer clipPath="#topConvexCurve">
+    {/* <svg width="0" height="0">
       <defs>
         <clipPath id="topConvexCurve" clipPathUnits="objectBoundingBox">
           <path d="M 0,1 L 0,0 L 1,0 L 1,1 C 0.75 0, .25 0, 0 1 Z" />
         </clipPath>
       </defs>
-    </svg>
+    </svg> */}
   </ConvexContainer>
 );
 
 export const ConvexBottom: React.FC<React.PropsWithChildren<CurveProps>> = ({ clipFill }) => (
-  <ConvexContainer clipFill={clipFill} clipPath="#bottomConvexCurve">
+  <ConvexContainer clipPath="#bottomConvexCurve">
     <svg width="0" height="0">
       <defs>
         <clipPath id="bottomConvexCurve" clipPathUnits="objectBoundingBox">
@@ -62,7 +62,7 @@ export const ConvexBottom: React.FC<React.PropsWithChildren<CurveProps>> = ({ cl
 );
 
 export const ConcaveTop: React.FC<React.PropsWithChildren<CurveProps>> = ({ clipFill }) => (
-  <ConcaveContainer clipFill={clipFill} clipPath="#topConcaveCurve">
+  <ConcaveContainer clipPath="#topConcaveCurve">
     <svg width="0" height="0">
       <defs>
         <clipPath id="topConcaveCurve" clipPathUnits="objectBoundingBox">
@@ -74,7 +74,7 @@ export const ConcaveTop: React.FC<React.PropsWithChildren<CurveProps>> = ({ clip
 );
 
 export const ConcaveBottom: React.FC<React.PropsWithChildren<CurveProps>> = ({ clipFill }) => (
-  <ConcaveContainer clipFill={clipFill} clipPath="#bottomConcaveCurve">
+  <ConcaveContainer clipPath="#bottomConcaveCurve">
     <svg width="0" height="0">
       <defs>
         <clipPath id="bottomConcaveCurve" clipPathUnits="objectBoundingBox">

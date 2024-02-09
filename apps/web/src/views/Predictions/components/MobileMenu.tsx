@@ -84,7 +84,7 @@ const MobileMenu = () => {
         </IconButton>
       </ButtonNav>
       <TabNav>
-        <ButtonMenu activeIndex={activeIndex} scale="sm" variant="subtle" onItemClick={handleItemClick}>
+        <ButtonMenu activeIndex={activeIndex} scale="sm" variant="primary" onItemClick={handleItemClick}>
           <ButtonMenuItem>
             <Cards color="currentColor" />
           </ButtonMenuItem>

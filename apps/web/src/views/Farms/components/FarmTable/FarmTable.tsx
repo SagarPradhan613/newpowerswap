@@ -31,6 +31,7 @@ const Container = styled.div`
   background: ${({ theme }) => theme.card.background};
   border-radius: 32px;
   margin: 16px 0px;
+  overflow: hidden;
   border: 1px solid ${({ theme }) => theme.colors.cardBorder};
 `
 

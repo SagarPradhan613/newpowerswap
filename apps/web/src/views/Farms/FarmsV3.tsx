@@ -423,159 +423,185 @@ const Farms: React.FC<React.PropsWithChildren> = ({ children }) => {
   const providerValue = useMemo(() => ({ chosenFarmsMemoized }), [chosenFarmsMemoized])
 
   return (
-    <FarmsV3Context.Provider value={providerValue}>
-      <PageHeader>
-        <Flex flexDirection="column">
-          <FarmFlexWrapper justifyContent="space-between">
-            <Box style={{ flex: '1 1 100%' }}>
-              <FarmH1 as="h1" scale="xxl" color="secondary" mb="24px">
-                {t('Farms')}
-              </FarmH1>
-              <FarmH2 scale="lg" color="text">
-                {t('Stake LP tokens to earn.')}
-              </FarmH2>
-              <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
-                <Button p="0" variant="text">
-                  <Text color="primary" bold fontSize="16px" mr="4px">
-                    {t('Community Auctions')}
-                  </Text>
-                  <ArrowForwardIcon color="primary" />
-                </Button>
-              </NextLinkFromReactRouter>
-            </Box>
-
-            {(chainId === ChainId.BSC || chainId === ChainId.BSC_TESTNET) && (
-              <Box>
-                <BCakeBoosterCard />
+    <>
+      {/* <div>
+        <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+          <img src="/images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+          <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+          <img src="/images/bgmaskbottomright.png" alt="bg" />
+        </div>
+        <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+          <img src="/images/bgmaskbottomleft.png" alt="bg" />
+        </div>
+      </div> */}
+      <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+        <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+        <img src="/images/bgmaskbottomright.png" alt="bg" />
+      </div>
+      <FarmsV3Context.Provider value={providerValue}>
+        <PageHeader style={{ background: 'transparent' }}>
+          <Flex flexDirection="column">
+            <FarmFlexWrapper justifyContent="space-between">
+              <Box style={{ flex: '1 1 100%' }}>
+                <FarmH1 as="h1" scale="xxl" color="secondary" mb="24px">
+                  {t('Farms')}
+                </FarmH1>
+                <FarmH2 scale="lg" color="text">
+                  {t('Stake LP tokens to earn.')}
+                </FarmH2>
+                <NextLinkFromReactRouter to="/farms/auction" prefetch={false}>
+                  <Button p="0" variant="text">
+                    <Text color="primary" bold fontSize="16px" mr="4px">
+                      {t('Community Auctions')}
+                    </Text>
+                    <ArrowForwardIcon color="primary" />
+                  </Button>
+                </NextLinkFromReactRouter>
               </Box>
-            )}
-          </FarmFlexWrapper>
-        </Flex>
-      </PageHeader>
-      <Page>
-        <ControlContainer>
-          <ViewControls>
-            <Flex mt="20px">
-              <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={setViewMode} />
-            </Flex>
-            <FarmWidget.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
-            <Flex mt="20px" ml="16px">
-              <FarmTypesFilter
-                v3FarmOnly={v3FarmOnly}
-                handleSetV3FarmOnly={setV3FarmOnly}
-                v2FarmOnly={v2FarmOnly}
-                handleSetV2FarmOnly={setV2FarmOnly}
-                boostedOnly={boostedOnly}
-                handleSetBoostedOnly={setBoostedOnly}
-                stableSwapOnly={stableSwapOnly}
-                handleSetStableSwapOnly={setStableSwapOnly}
-                farmTypesEnableCount={farmTypesEnableCount}
-                handleSetFarmTypesEnableCount={setFarmTypesEnableCount}
-              />
-              <ToggleWrapper>
-                <Toggle
-                  id="staked-only-farms"
-                  checked={stakedOnly}
-                  onChange={() => setStakedOnly(!stakedOnly)}
-                  scale="sm"
-                />
-                <Text> {t('Staked only')}</Text>
-              </ToggleWrapper>
-            </Flex>
-          </ViewControls>
-          <FilterContainer>
-            <LabelWrapper>
-              <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
-                {t('Sort by')}
-              </Text>
-              <Select
-                options={[
-                  {
-                    label: t('Hot'),
-                    value: 'hot',
-                  },
-                  {
-                    label: t('APR'),
-                    value: 'apr',
-                  },
-                  {
-                    label: t('Multiplier'),
-                    value: 'multiplier',
-                  },
-                  {
-                    label: t('Earned'),
-                    value: 'earned',
-                  },
-                  {
-                    label: t('Liquidity'),
-                    value: 'liquidity',
-                  },
-                  {
-                    label: t('Latest'),
-                    value: 'latest',
-                  },
-                ]}
-                onOptionChange={handleSortOptionChange}
-              />
-            </LabelWrapper>
-            <LabelWrapper style={{ marginLeft: 16 }}>
-              <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
-                {t('Search')}
-              </Text>
-              <SearchInput initialValue={normalizedUrlSearch} onChange={handleChangeQuery} placeholder="Search Farms" />
-            </LabelWrapper>
-          </FilterContainer>
-        </ControlContainer>
-        {isInactive && (
-          <Box mb="32px">
-            {chainId === ChainId.BSC && (
-              <FinishedTextContainer>
-                <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
-                  {t("Don't see the farm you are staking?")}
-                </Text>
-                <Flex>
-                  <FinishedTextLink
-                    external
-                    color="failure"
-                    fontSize={['16px', null, '20px']}
-                    href="https://v1-farms.pancakeswap.finance/farms/history"
-                  >
-                    {t('check out v1 farms')}.
-                  </FinishedTextLink>
-                </Flex>
-              </FinishedTextContainer>
-            )}
-            {chainId && V3_MIGRATION_SUPPORTED_CHAINS.includes(chainId) && (
-              <FinishedTextContainer>
-                <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
-                  {t('Unstaking from v2 farm?')}
-                </Text>
-                <Flex>
-                  <FinishedTextLink external color="failure" fontSize={['16px', null, '20px']} href="/migration">
-                    {t('Migrate to v3 here')}.
-                  </FinishedTextLink>
-                </Flex>
-              </FinishedTextContainer>
-            )}
-          </Box>
-        )}
 
-        {!isLoading && // FarmV3 initial data will be slower, wait for it loads for now to prevent showing the v2 farm from config and then v3 pop up later
-          (viewMode === ViewMode.TABLE ? (
-            <Table farms={chosenFarmsMemoized} cakePrice={cakePrice} userDataReady={userDataReady} />
-          ) : (
-            <FlexLayout>{children}</FlexLayout>
-          ))}
-        {account && !v2UserDataLoaded && !v3UserDataLoaded && stakedOnly && (
-          <Flex justifyContent="center">
-            <Loading />
+              {(chainId === ChainId.BSC || chainId === ChainId.BSC_TESTNET) && (
+                <Box>
+                  <BCakeBoosterCard />
+                </Box>
+              )}
+            </FarmFlexWrapper>
           </Flex>
-        )}
-        {chosenFarms.length > 0 && <div ref={observerRef} />}
-        <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} />
-        <V3SubgraphHealthIndicator />
-      </Page>
-    </FarmsV3Context.Provider>
+        </PageHeader>
+        <Page>
+          <ControlContainer>
+            <ViewControls>
+              <Flex mt="20px">
+                <ToggleView idPrefix="clickFarm" viewMode={viewMode} onToggle={setViewMode} />
+              </Flex>
+              <FarmWidget.FarmTabButtons hasStakeInFinishedFarms={stakedInactiveFarms.length > 0} />
+              <Flex mt="20px" ml="16px">
+                <FarmTypesFilter
+                  v3FarmOnly={v3FarmOnly}
+                  handleSetV3FarmOnly={setV3FarmOnly}
+                  v2FarmOnly={v2FarmOnly}
+                  handleSetV2FarmOnly={setV2FarmOnly}
+                  boostedOnly={boostedOnly}
+                  handleSetBoostedOnly={setBoostedOnly}
+                  stableSwapOnly={stableSwapOnly}
+                  handleSetStableSwapOnly={setStableSwapOnly}
+                  farmTypesEnableCount={farmTypesEnableCount}
+                  handleSetFarmTypesEnableCount={setFarmTypesEnableCount}
+                />
+                <ToggleWrapper>
+                  <Toggle
+                    id="staked-only-farms"
+                    checked={stakedOnly}
+                    onChange={() => setStakedOnly(!stakedOnly)}
+                    scale="sm"
+                  />
+                  <Text> {t('Staked only')}</Text>
+                </ToggleWrapper>
+              </Flex>
+            </ViewControls>
+            <FilterContainer>
+              <LabelWrapper>
+                <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
+                  {t('Sort by')}
+                </Text>
+                <Select
+                  options={[
+                    {
+                      label: t('Hot'),
+                      value: 'hot',
+                    },
+                    {
+                      label: t('APR'),
+                      value: 'apr',
+                    },
+                    {
+                      label: t('Multiplier'),
+                      value: 'multiplier',
+                    },
+                    {
+                      label: t('Earned'),
+                      value: 'earned',
+                    },
+                    {
+                      label: t('Liquidity'),
+                      value: 'liquidity',
+                    },
+                    {
+                      label: t('Latest'),
+                      value: 'latest',
+                    },
+                  ]}
+                  onOptionChange={handleSortOptionChange}
+                />
+              </LabelWrapper>
+              <LabelWrapper style={{ marginLeft: 16 }}>
+                <Text textTransform="uppercase" color="textSubtle" fontSize="12px" bold>
+                  {t('Search')}
+                </Text>
+                <SearchInput
+                  initialValue={normalizedUrlSearch}
+                  onChange={handleChangeQuery}
+                  placeholder="Search Farms"
+                />
+              </LabelWrapper>
+            </FilterContainer>
+          </ControlContainer>
+          {isInactive && (
+            <Box mb="32px">
+              {chainId === ChainId.BSC && (
+                <FinishedTextContainer>
+                  <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
+                    {t("Don't see the farm you are staking?")}
+                  </Text>
+                  <Flex>
+                    <FinishedTextLink
+                      external
+                      color="failure"
+                      fontSize={['16px', null, '20px']}
+                      href="https://v1-farms.pancakeswap.finance/farms/history"
+                    >
+                      {t('check out v1 farms')}.
+                    </FinishedTextLink>
+                  </Flex>
+                </FinishedTextContainer>
+              )}
+              {chainId && V3_MIGRATION_SUPPORTED_CHAINS.includes(chainId) && (
+                <FinishedTextContainer>
+                  <Text fontSize={['16px', null, '20px']} color="failure" pr="4px">
+                    {t('Unstaking from v2 farm?')}
+                  </Text>
+                  <Flex>
+                    <FinishedTextLink external color="failure" fontSize={['16px', null, '20px']} href="/migration">
+                      {t('Migrate to v3 here')}.
+                    </FinishedTextLink>
+                  </Flex>
+                </FinishedTextContainer>
+              )}
+            </Box>
+          )}
+
+          {!isLoading && // FarmV3 initial data will be slower, wait for it loads for now to prevent showing the v2 farm from config and then v3 pop up later
+            (viewMode === ViewMode.TABLE ? (
+              <Table farms={chosenFarmsMemoized} cakePrice={cakePrice} userDataReady={userDataReady} />
+            ) : (
+              <FlexLayout>{children}</FlexLayout>
+            ))}
+          {account && !v2UserDataLoaded && !v3UserDataLoaded && stakedOnly && (
+            <Flex justifyContent="center">
+              <Loading />
+            </Flex>
+          )}
+          {chosenFarms.length > 0 && <div ref={observerRef} />}
+          {/* <StyledImage src="/images/decorations/3dpan.png" alt="Pancake illustration" width={120} height={103} /> */}
+          <V3SubgraphHealthIndicator />
+        </Page>
+      </FarmsV3Context.Provider>
+    </>
   )
 }
 

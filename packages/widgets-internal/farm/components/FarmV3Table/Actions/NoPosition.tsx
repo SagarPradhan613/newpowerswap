@@ -7,11 +7,14 @@ import { ActionTitles, ActionContent } from "./styles";
 
 const ActionContainer = styled.div`
   padding: 16px;
-  border: 2px solid ${({ theme }) => theme.colors.input};
+  // border: 2px solid ${({ theme }) => theme.colors.input};
   border-radius: 16px;
   flex-grow: 1;
   flex-basis: 0;
   margin-bottom: 16px;
+  background-image: url(/images/dropdowncontentbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 
   ${({ theme }) => theme.mediaQueries.sm} {
     margin-left: 12px;

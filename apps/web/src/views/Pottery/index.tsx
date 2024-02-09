@@ -25,38 +25,52 @@ const Pottery: React.FC<React.PropsWithChildren> = () => {
   }
 
   return (
-    <Box position="relative">
-      <Box padding="0 16px" margin="10px auto" width={['100%', '100%', '100%', '800px']}>
-        <Message variant="warning">
-          <MessageText>
-            <Text as="span">{t('Pancakeswap Pottery (BETA) is indefinitely halted. Please refer')}</Text>
-            <Link
-              style={{ display: 'inline-block' }}
-              m="0 4px"
-              external
-              href="https://blog.pancakeswap.finance/articles/idefinitely-halt-of-pancake-swap-pottery-beta-product"
-            >
-              {t('here')}
-            </Link>
-            <Text as="span">{t('for more details')}</Text>
-          </MessageText>
-        </Message>
+    <>
+      <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+        <img src="/images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+        <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+        <img src="/images/bgmaskbottomright.png" alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+        <img src="/images/bgmaskbottomleft.png" alt="bg" />
+      </div>
+      <Box position="relative">
+        <Box padding="0 16px" margin="10px auto" width={['100%', '100%', '100%', '800px']}>
+          <Message variant="warning">
+            <MessageText>
+              <Text as="span">{t('Pancakeswap Pottery (BETA) is indefinitely halted. Please refer')}</Text>
+              <Link
+                style={{ display: 'inline-block' }}
+                m="0 4px"
+                external
+                href="https://blog.pancakeswap.finance/articles/idefinitely-halt-of-pancake-swap-pottery-beta-product"
+              >
+                {t('here')}
+              </Link>
+              <Text as="span">{t('for more details')}</Text>
+            </MessageText>
+          </Message>
+        </Box>
+        <Banner handleScroll={handleScroll} />
+        <Box>
+          <Pot />
+        </Box>
+        <FinishedRounds />
+        <HowToPlay />
+        <PrizeFunds />
+        <FAQ />
+        {createPortal(
+          <>
+            <SubgraphHealthIndicator subgraphName="pancakeswap/pottery" />
+          </>,
+          document.body,
+        )}
       </Box>
-      <Banner handleScroll={handleScroll} />
-      <Box ref={potWrapperEl}>
-        <Pot />
-      </Box>
-      <FinishedRounds />
-      <HowToPlay />
-      <PrizeFunds />
-      <FAQ />
-      {createPortal(
-        <>
-          <SubgraphHealthIndicator subgraphName="pancakeswap/pottery" />
-        </>,
-        document.body,
-      )}
-    </Box>
+    </>
   )
 }
 

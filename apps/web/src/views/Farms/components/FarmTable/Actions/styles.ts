@@ -2,7 +2,11 @@ import { styled } from 'styled-components'
 
 export const ActionContainer = styled.div`
   padding: 16px;
-  border: 2px solid ${({ theme }) => theme.colors.input};
+  // border: 2px solid ${({ theme }) => theme.colors.input};
+  background-image: url(/images/dropdowncontentbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
   border-radius: 16px;
   flex-grow: 1;
   flex-basis: 0;

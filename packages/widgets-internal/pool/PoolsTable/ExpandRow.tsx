@@ -9,6 +9,9 @@ const StyledRow = styled.div`
   background-color: transparent;
   display: flex;
   cursor: pointer;
+  background-image: url(/images/croppedrowmaskbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 export const ExpandRow: React.FC<

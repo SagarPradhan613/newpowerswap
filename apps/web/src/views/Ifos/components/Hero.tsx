@@ -13,12 +13,8 @@ import { getChainBasedImageUrl } from '../helpers'
 const StyledHero = styled(Box)`
   position: relative;
   overflow: hidden;
-  background: ${({ theme }) =>
-    theme.isDark
-      ? 'linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)'
-      : 'linear-gradient(139.73deg, #E6FDFF 0%, #F3EFFF 100%)'};
+  background: transparent;
 `
-
 const BunnyContainer = styled(Box)`
   z-index: 1;
   position: absolute;

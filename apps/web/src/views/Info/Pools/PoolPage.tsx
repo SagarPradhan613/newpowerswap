@@ -281,7 +281,7 @@ const PoolPage: React.FC<React.PropsWithChildren<{ address: string }>> = ({ addr
                     activeIndex={showWeeklyData}
                     onItemClick={(index) => setShowWeeklyData(index)}
                     scale="sm"
-                    variant="subtle"
+                    variant="primary"
                   >
                     <ButtonMenuItem width="100%">{t('24H')}</ButtonMenuItem>
                     <ButtonMenuItem width="100%">{t('7D')}</ButtonMenuItem>

@@ -22,7 +22,7 @@ const StyledBackground = styled(Flex)<{ showBackgroundColor: boolean }>`
   flex-direction: column;
   padding-top: 48px;
   margin-bottom: 48px;
-  background: ${({ showBackgroundColor }) => (showBackgroundColor ? BACKGROUND_COLOR : '')};
+  // background: ${({ showBackgroundColor }) => (showBackgroundColor ? BACKGROUND_COLOR : '')};
   z-index: 0;
 
   ${({ theme }) => theme.mediaQueries.lg} {

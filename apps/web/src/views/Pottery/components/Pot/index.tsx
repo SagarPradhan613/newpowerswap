@@ -13,8 +13,8 @@ import { POT_CATEGORY } from '../../types'
 const PotteryContainer = styled(Box)`
   position: relative;
   padding: 44px 16px 56px 16px;
-  background: radial-gradient(51.67% 114.22% at 51.67% 49.78%, #6e42bc 0%, #a881fc 100%);
-
+  // background: radial-gradient(51.67% 114.22% at 51.67% 49.78%, #6e42bc 0%, #a881fc 100%);
+  background: transparent;
   &:: before {
     content: '';
     width: 100%;
@@ -24,16 +24,6 @@ const PotteryContainer = styled(Box)`
     left: 0;
     z-index: 1;
     clip-path: polygon(0 0%, 0% 100%, 100% 100%);
-    background: linear-gradient(
-      90deg,
-      rgba(168, 129, 252, 1) 0%,
-      rgb(160 121 244) 15%,
-      rgb(145 104 226) 30%,
-      rgb(136 95 216) 45%,
-      rgb(139 98 219) 65%,
-      rgb(148 108 230) 80%,
-      rgba(168, 129, 252, 1) 100%
-    );
   }
 `
 

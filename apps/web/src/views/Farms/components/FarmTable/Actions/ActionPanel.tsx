@@ -91,6 +91,10 @@ const Container = styled.div<{ expanded; isLastFarm }>`
         `};
   overflow: hidden;
   background: ${({ theme }) => theme.colors.dropdown};
+  background-image: url(/images/croppedrowmaskbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+
   display: flex;
   width: 100%;
   flex-direction: column-reverse;
@@ -131,7 +135,13 @@ const ActionContainer = styled.div`
 const InfoContainer = styled.div`
   min-width: 200px;
   padding-left: 24px;
+  border-radius: 24px;
+  background-image: url(/images/dropdowncontentbg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
   padding-right: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 `
 
 const ValueContainer = styled.div``

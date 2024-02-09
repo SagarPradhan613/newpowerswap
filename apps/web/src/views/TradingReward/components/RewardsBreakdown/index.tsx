@@ -109,7 +109,7 @@ const RewardsBreakdown: React.FC<React.PropsWithChildren<RewardsBreakdownProps>>
       </Text>
       {currentList && (
         <Box width="350px" margin="auto auto 16px auto">
-          <ButtonMenu activeIndex={index} onItemClick={handleIndex} fullWidth scale="sm" variant="subtle">
+          <ButtonMenu activeIndex={index} onItemClick={handleIndex} fullWidth scale="sm" variant="primary">
             <ButtonMenuItem>{t('Current Round')}</ButtonMenuItem>
             <ButtonMenuItem>{t('Previous Rounds')}</ButtonMenuItem>
           </ButtonMenu>

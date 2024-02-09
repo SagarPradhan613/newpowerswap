@@ -27,6 +27,43 @@ import useShowMoreUserHistory from './hooks/useShowMoreUserRounds'
 
 const LotteryPage = styled.div`
   min-height: calc(100vh - 64px);
+  position: relative;
+`
+
+const HeroContainer = styled.div`
+  background-image: url(/images/lotterybg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+
+  @media (max-width: 767px) {
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    // padding-top:6rem;
+    // padding-bottom:4rem;
+  }
+`
+
+const MainHeroContainer = styled.div`
+  position: relative;
+
+  @media (max-width: 767px) {
+  }
+
+  /* Tablet styles */
+  @media (min-width: 768px) and (max-width: 1023px) {
+  }
+
+  /* Desktop styles */
+  @media (min-width: 1024px) {
+    padding: 2rem 4rem;
+  }
 `
 
 const Lottery = () => {
@@ -44,16 +81,43 @@ const Lottery = () => {
 
   return (
     <>
+      <div style={{ position: 'absolute', height: '100%', width: '100%', top: '0', left: '0' }}>
+        <img src="/images/bgmasktopleft.png" style={{ height: '100%' }} alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', height: '100%', top: '0', right: '0' }}>
+        <img src="/images/bgmasktopright.png" style={{ height: '100%' }} alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '0', right: '0' }}>
+        <img src="/images/bgmaskbottomright.png" alt="bg" />
+      </div>
+      <div style={{ position: 'absolute', bottom: '0', left: '0' }}>
+        <img src="/images/bgmaskbottomleft.png" alt="bg" />
+      </div>
       <LotteryPage>
-        <PageSection background={TITLE_BG} index={1} hasCurvedDivider={false}>
+        {/* <PageSection background={TITLE_BG} index={1} hasCurvedDivider={false}> */}
+        {/* <MainHeroContainer>
+          <HeroContainer>
+            <Hero />
+          </HeroContainer>
+        </MainHeroContainer> */}
+
+        {/* <Hero /> */}
+
+        {/* </PageSection> */}
+        <PageSection
+          style={{ margin: '2rem 4rem', borderRadius: '30px' }}
+          background={TITLE_BG}
+          index={1}
+          hasCurvedDivider={false}
+        >
           <Hero />
         </PageSection>
         <PageSection
           containerProps={{ style: { marginTop: '-30px' } }}
-          background={GET_TICKETS_BG}
-          concaveDivider
-          clipFill={{ light: '#7645D9' }}
-          dividerPosition="top"
+          // background={GET_TICKETS_BG}
+          // concaveDivider
+          // clipFill={{ light: '#7645D9' }}
+          // dividerPosition="top"
           index={2}
         >
           <Flex alignItems="center" justifyContent="center" flexDirection="column" pt="24px">
@@ -76,13 +140,19 @@ const Lottery = () => {
             <NextDrawCard />
           </Flex>
         </PageSection>
-        <PageSection background={CHECK_PRIZES_BG} hasCurvedDivider={false} index={2}>
-          <CheckPrizesSection />
+        <PageSection
+          //  background={CHECK_PRIZES_BG}
+          hasCurvedDivider={false}
+          index={2}
+        >
+          <div style={{ backgroundImage: 'url(/images/bgmask.png)', borderRadius: '30px', padding: '2rem 2rem' }}>
+            <CheckPrizesSection />
+          </div>
         </PageSection>
         <PageSection
           position="relative"
           innerProps={{ style: { margin: '0', width: '100%' } }}
-          background={isDark ? FINISHED_ROUNDS_BG_DARK : FINISHED_ROUNDS_BG}
+          // background={isDark ? FINISHED_ROUNDS_BG_DARK : FINISHED_ROUNDS_BG}
           hasCurvedDivider={false}
           index={2}
         >
@@ -108,8 +178,8 @@ const Lottery = () => {
         </PageSection>
         <PageSection
           dividerPosition="top"
-          dividerFill={{ light: theme.colors.background }}
-          clipFill={{ light: '#9A9FD0', dark: '#66578D' }}
+          // dividerFill={{ light: theme.colors.background }}
+          // clipFill={{ light: '#9A9FD0', dark: '#66578D' }}
           index={2}
         >
           <HowToPlay />

@@ -6,7 +6,7 @@ import { PageHeaderProps } from "./types";
 const Outer = styled(Box)<{ background?: string }>`
   padding-top: 32px;
   padding-bottom: 32px;
-  background: ${({ theme, background }) => background || theme.colors.gradientBubblegum};
+  // background: ${({ theme, background }) => background || theme.colors.gradientBubblegum};
 `;
 
 const Inner = styled(Container)`
@@ -14,7 +14,7 @@ const Inner = styled(Container)`
 `;
 
 const PageHeader: React.FC<React.PropsWithChildren<PageHeaderProps>> = ({ background, children, ...props }) => (
-  <Outer background={background} {...props}>
+  <Outer {...props}>
     <Inner>{children}</Inner>
   </Outer>
 );

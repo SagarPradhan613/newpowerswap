@@ -62,7 +62,7 @@ const RewardCalculate = () => {
       index={1}
       dividerPosition="top"
       concaveDivider
-      background={theme.colors.gradientBubblegum}
+      // background={theme.colors.gradientBubblegum}
       clipFill={{
         light: 'linear-gradient(139.73deg, #E2FCFF 0%, #EBF3FF 100%)',
         dark: 'linear-gradient(139.73deg, #313D5C 0%, #383258 100%)',
@@ -87,7 +87,7 @@ const RewardCalculate = () => {
               textAlign={['left', 'left', 'left', 'center']}
               fontSize={['40px']}
               lineHeight="110%"
-              color="body"
+              color="white"
               bold
             >
               {t("Join PancakeSwap's Community and Make a Difference")}

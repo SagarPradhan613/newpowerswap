@@ -106,7 +106,7 @@ const Filters: React.FC<React.PropsWithChildren<FiltersProps>> = ({ address, att
         {t('Filter by')}
       </FilterByTitle>
       <FilterByControls>
-        <ButtonMenu scale="sm" activeIndex={activeButtonIndex} onItemClick={onActiveButtonChange} variant="subtle">
+        <ButtonMenu scale="sm" activeIndex={activeButtonIndex} onItemClick={onActiveButtonChange} variant="primary">
           <ButtonMenuItem>{t('All')}</ButtonMenuItem>
           <ButtonMenuItem>{t('On Sale')}</ButtonMenuItem>
         </ButtonMenu>

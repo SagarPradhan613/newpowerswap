@@ -22,7 +22,7 @@ const TimePeriodFilter = () => {
   }
 
   return (
-    <ButtonMenu scale="sm" variant="subtle" activeIndex={activeIndex} onItemClick={handleSetTimePeriod} fullWidth>
+    <ButtonMenu scale="sm" variant="primary" activeIndex={activeIndex} onItemClick={handleSetTimePeriod} fullWidth>
       {timePeriodOptions.map(({ label, value }) => (
         <ButtonMenuItem key={value}>{label.toUpperCase()}</ButtonMenuItem>
       ))}
