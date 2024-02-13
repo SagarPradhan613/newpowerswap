@@ -146,7 +146,7 @@ const CurrencyInputPanel = memo(function CurrencyInputPanel({
   }, [onPresentCurrencyModal, disableCurrencySelect])
 
   const isAtPercentMax = (maxAmount && value === maxAmount.toExact()) || (lpPercent && lpPercent === '100')
-
+  console.log(currency, 'currency')
   const balance = !hideBalance && !!currency ? formatAmount(selectedCurrencyBalance, 6) : undefined
   return (
     <SwapUI.CurrencyInputPanel

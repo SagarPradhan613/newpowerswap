@@ -14,7 +14,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 0,
     address: '0x133B3D95bAD5405d14d53473671200e9342896BF',
-    pairName: 'CAKE-BNB',
+    pairName: 'POWER-BNB',
     chainId: ChainId.BSC,
     type: GaugeType.V3,
     token0Address: bscTokens.cake.address,
@@ -24,7 +24,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 1,
     address: '0x7f51c8AaA6B0599aBd16674e2b17FEc7a9f674A1',
-    pairName: 'CAKE-USDT',
+    pairName: 'POWER-USDT',
     chainId: ChainId.BSC,
     type: GaugeType.V3,
     token0Address: bscTokens.cake.address,
@@ -144,7 +144,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 13,
     address: '0x9f6EB6903C1277c8f02d71F8814dc9998199af1D',
-    pairName: 'CAKE-BUSD',
+    pairName: 'POWER-BUSD',
     chainId: ChainId.BSC,
     type: GaugeType.V3,
     token0Address: bscTokens.cake.address,
@@ -285,7 +285,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 27,
     address: '0x63ca58e7c6bF06B06cBbEc2a83bf6AA8f8f9f77B',
-    pairName: 'ZBC-CAKE',
+    pairName: 'ZBC-POWER',
     chainId: ChainId.BSC,
     type: GaugeType.V3,
     token0Address: bscTokens.zbc.address,
@@ -395,7 +395,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 38,
     address: '0x466e7d53e23620a24db23E2B1f8BD10Ff52116Cd',
-    pairName: 'CSIX-CAKE',
+    pairName: 'CSIX-POWER',
     chainId: ChainId.BSC,
     type: GaugeType.V3,
     token0Address: bscTokens.csix.address,
@@ -926,7 +926,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 91,
     address: '0x9cac9745731d1Cf2B483f257745A512f0938DD01',
-    pairName: 'CAKE Pool',
+    pairName: 'POWER Pool',
     chainId: ChainId.BSC,
     type: GaugeType.VeCakePool,
   },
@@ -934,7 +934,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 92,
     address: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0',
-    pairName: 'CAKE-BNB',
+    pairName: 'POWER-BNB',
     chainId: ChainId.BSC,
     type: GaugeType.V2,
     token0Address: bscTokens.cake.address,
@@ -944,7 +944,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 93,
     address: '0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b',
-    pairName: 'CAKE-USDT',
+    pairName: 'POWER-USDT',
     chainId: ChainId.BSC,
     type: GaugeType.V2,
     token0Address: bscTokens.cake.address,
@@ -1104,7 +1104,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 109,
     address: '0x517F451b0A9E1b87Dc0Ae98A05Ee033C3310F046',
-    pairName: 'CAKE-ETH',
+    pairName: 'POWER-ETH',
     chainId: ChainId.ETHEREUM,
     type: GaugeType.V3,
     token0Address: ethereumTokens.cake.address,
@@ -1114,7 +1114,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 110,
     address: '0x11A6713B702817DB0Aa0964D1AfEe4E641319732',
-    pairName: 'CAKE-USDC',
+    pairName: 'POWER-USDC',
     chainId: ChainId.ETHEREUM,
     type: GaugeType.V3,
     token0Address: ethereumTokens.cake.address,
@@ -1505,7 +1505,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 149,
     address: '0xF5Fac36c2429e1Cf84D4aBACdB18477Ef32589c9',
-    pairName: 'CAKE-WETH',
+    pairName: 'POWER-WETH',
     chainId: ChainId.ARBITRUM_ONE,
     type: GaugeType.V3,
     token0Address: arbitrumTokens.cake.address,
@@ -1765,7 +1765,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   {
     gid: 175,
     address: '0xB1D54d76E2cB9425Ec9c018538cc531440b55dbB',
-    pairName: 'sdCAKE-CAKE',
+    pairName: 'sdPOWER-POWER',
     chainId: ChainId.BSC,
     type: GaugeType.StableSwap,
     tokenAddresses: [bscTokens.sdcake.address, bscTokens.cake.address],
@@ -1972,7 +1972,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   },
   {
     gid: 196,
-    pairName: 'CAKE-WETH',
+    pairName: 'POWER-WETH',
     address: '0x3c11CAACc9FC70d9130792c39702C5F96cE68a93',
     chainId: ChainId.ZKSYNC,
     type: GaugeType.V3,
@@ -2052,7 +2052,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   },
   {
     gid: 204,
-    pairName: 'sdCAKE-CAKE',
+    pairName: 'sdPOWER-POWER',
     address: '0xB1D54d76E2cB9425Ec9c018538cc531440b55dbB',
     chainId: ChainId.BSC,
     type: GaugeType.StableSwap,
@@ -2130,7 +2130,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   },
   {
     gid: 212,
-    pairName: 'sdCAKE-CAKE',
+    pairName: 'sdPOWER-POWER',
     address: '0x8A876Ca851063e0252654CA6368a5B2280f51c32',
     chainId: ChainId.BSC,
     type: GaugeType.V3,
@@ -2150,7 +2150,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   },
   {
     gid: 214,
-    pairName: 'mCAKE-CAKE',
+    pairName: 'mPOWER-POWER',
     address: '0xb9dC6396AcFFD24E0f69Dfd3231fDaeB31514D02',
     chainId: ChainId.BSC,
     type: GaugeType.StableSwap,
@@ -2286,7 +2286,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   },
   {
     gid: 228,
-    pairName: 'FDUSD-CAKE',
+    pairName: 'FDUSD-POWER',
     address: '0xA62439A42fbeC9827a0B0452A5fD619d517F2D83',
     chainId: ChainId.BSC,
     type: GaugeType.V3,
@@ -2436,7 +2436,7 @@ export const CONFIG_PROD: GaugeConfig[] = [
   },
   {
     gid: 243,
-    pairName: 'CKP-mCAKE',
+    pairName: 'CKP-mPOWER',
     address: '0xdb92AD18eD18752a194b9D831413B09976B34AE1',
     chainId: ChainId.BSC,
     type: GaugeType.V2,
