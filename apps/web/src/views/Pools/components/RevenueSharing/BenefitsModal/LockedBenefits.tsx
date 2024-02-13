@@ -80,7 +80,7 @@ const LockedBenefits = () => {
           <Box mt="8px">
             <Flex mt="8px" flexDirection="row" alignItems="center">
               <Text color="textSubtle" fontSize="14px" mr="auto">
-                {t('CAKE Yield')}
+                {t('POWER Yield')}
               </Text>
               <Text style={{ display: 'inline-block' }} color="success" bold>
                 {`${Number(lockedApy).toFixed(2)}%`}
@@ -88,19 +88,19 @@ const LockedBenefits = () => {
               <Text ml="2px" as="del" bold>{`${Number(delApy).toFixed(2)}%`}</Text>
             </Flex>
             <BenefitsText
-              title="iCAKE"
+              title="iPOWER"
               value={cakeBenefits?.iCake}
               tooltipComponent={iCakeTooltipComponent()}
               icon={<ICakeIcon width={24} height={24} mr="8px" />}
             />
             <BenefitsText
-              title="bCAKE"
+              title="bPOWER"
               value={t('Up to %boostMultiplier%x', { boostMultiplier: 2 })}
               tooltipComponent={bCakeTooltipComponent()}
               icon={<BCakeIcon width={24} height={24} mr="8px" />}
             />
             <BenefitsText
-              title="vCAKE"
+              title="vPOWER"
               value={cakeBenefits?.vCake?.vaultScore}
               tooltipComponent={vCakeTooltipComponent()}
               icon={<VCakeIcon width={24} height={24} mr="8px" />}

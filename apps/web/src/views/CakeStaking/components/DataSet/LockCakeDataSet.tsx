@@ -35,12 +35,12 @@ export const LockCakeDataSet = () => {
   return (
     <DataBox gap="8px">
       <DataHeader value={veCakeAmount} />
-      <DataRow label={t('CAKE to be locked')} value={amount.toFixed(2)} />
+      <DataRow label={t('POWER to be locked')} value={amount.toFixed(2)} />
       <DataRow
         label={
           <Tooltips
             content={t(
-              'Once locked, your CAKE will be staked in veCAKE contract until this date. Early withdrawal is not available.',
+              'Once locked, your POWER will be staked in vePOWER contract until this date. Early withdrawal is not available.',
             )}
           >
             <TooltipText fontSize={12} bold color="textSubtle" textTransform="uppercase">

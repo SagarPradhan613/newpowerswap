@@ -10,7 +10,8 @@ import { Autoplay } from 'swiper/modules'
 const IntroSteps = [
   {
     title: <Trans>Your first step in the DeFi world</Trans>,
-    icon: 'https://cdn.pancakeswap.com/wallets/wallet_intro.png',
+    // icon: 'https://cdn.pancakeswap.com/wallets/wallet_intro.png',
+    icon: '/images/newpowerswapimg.png',
     description: (
       <Trans>
         A Web3 Wallet allows you to send and receive crypto assets like bitcoin, BNB, ETH, NFTs and much more.
@@ -89,7 +90,13 @@ const StepIntro = ({ docLink, docText }: { docLink: string; docText: string }) =
             <Heading as="h2" color="secondary">
               {introStep.title}
             </Heading>
-            <Image m="auto" src={introStep.icon} width={198} height={178} />
+            <Image
+              style={{ marginTop: '15px', marginBottom: '10px' }}
+              m="auto"
+              src={introStep.icon}
+              width={158}
+              height={158}
+            />
             <Text maxWidth="368px" m="auto" small color="textSubtle">
               {introStep.description}
             </Text>

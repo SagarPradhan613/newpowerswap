@@ -35,7 +35,7 @@ export enum TrendingTagType {
   PancakeBunniesNFT = 'Pancake Bunnies NFT',
   TowerDefense = 'Tower Defense',
   Multiplayer = 'Multiplayer',
-  CakeToken = 'CAKE token',
+  CakeToken = 'POWER token',
   BaseBuilding = 'Base Building',
 }
 

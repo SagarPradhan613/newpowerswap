@@ -114,7 +114,7 @@ const config: (
           supportChainIds: SUPPORT_FARMS,
         },
         {
-          label: t('CAKE Staking'),
+          label: t('POWER Staking'),
           href: '/cake-staking',
           supportChainIds: SUPPORT_CAKE_STAKING,
         },

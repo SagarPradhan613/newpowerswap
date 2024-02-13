@@ -157,7 +157,11 @@ export const IfoCurrentCard = ({
                   >
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <img src="/images/powerswapimg.png" style={{ height: '80px', width: '80px' }} alt="powerswap" />
+                        <img
+                          src="/images/newpowerswapimg.png"
+                          style={{ height: '80px', width: '80px' }}
+                          alt="powerswap"
+                        />
                       </div>
                       <div style={{ marginLeft: '10px' }}>
                         <p style={{ color: 'black', fontWeight: '600', fontSize: '40px' }}>

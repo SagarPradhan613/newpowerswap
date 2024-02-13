@@ -120,7 +120,7 @@ const LockedInfo = () => {
         <RowBetween>
           <AutoColumn>
             <Text fontSize={12} color="textSubtle" textTransform="uppercase" bold>
-              {t('cake locked')}
+              {t('POWER locked')}
             </Text>
             <CakeLocked
               proxyExpired={cakePoolLockExpired}
@@ -151,7 +151,7 @@ const LockedInfo = () => {
             <Message variant="warning" icon={<InfoFilledIcon color="warning" />}>
               <Text as="p">
                 {t(
-                  'CAKE Pool migrated position has unlocked. Go to the pool page to withdraw, add CAKE into veCAKE to increase your veCAKE benefits.',
+                  'POWER Pool migrated position has unlocked. Go to the pool page to withdraw, add POWER into vePOWER to increase your vePOWER benefits.',
                 )}
               </Text>
             </Message>
@@ -160,7 +160,7 @@ const LockedInfo = () => {
               <AutoColumn gap="8px">
                 <Text as="p">
                   {t(
-                    'Position migrated from CAKE Pool can not be extended or topped up. To extend or add more CAKE, set up a native veCAKE position.',
+                    'Position migrated from POWER Pool can not be extended or topped up. To extend or add more POWER, set up a native vePOWER position.',
                   )}
                 </Text>
                 <LearnMore />
@@ -169,7 +169,7 @@ const LockedInfo = () => {
           )}
           <Link external style={{ textDecoration: 'none', width: '100%' }} href="/pools">
             <Button width="100%" variant="secondary">
-              {t('View CAKE Pool Position')}
+              {t('View POWER Pool Position')}
             </Button>
           </Link>
         </>
@@ -179,7 +179,7 @@ const LockedInfo = () => {
         <Message variant="warning" icon={<InfoFilledIcon color={CUSTOM_WARNING_COLOR} />}>
           <Text as="p" color={CUSTOM_WARNING_COLOR}>
             {t(
-              'Renew your veCAKE position to continue enjoying the benefits of weekly CAKE yield, revenue share, gauges voting, farm yield boosting, participating in IFOs, and so much more!',
+              'Renew your vePOWER position to continue enjoying the benefits of weekly POWER yield, revenue share, gauges voting, farm yield boosting, participating in IFOs, and so much more!',
             )}
           </Text>
         </Message>
@@ -200,7 +200,7 @@ const SingleStakeTooltip = () => {
 
   return (
     <>
-      {t('veCAKE is calculated with number of CAKE locked, and the remaining time against maximum lock time.')}
+      {t('vePOWER is calculated with number of POWER locked, and the remaining time against maximum lock time.')}
       <LearnMore />
     </>
   )
@@ -214,15 +214,15 @@ const DualStakeTooltip: React.FC<{
 
   return (
     <>
-      {t('veCAKE is calculated with number of CAKE locked, and the remaining time against maximum lock time.')}
+      {t('vePOWER is calculated with number of POWER locked, and the remaining time against maximum lock time.')}
       <br />
       <br />
       <ul>
         <li>
-          {t('Native:')} {formatNumber(nativeBalance, 2, 4)} veCAKE
+          {t('Native:')} {formatNumber(nativeBalance, 2, 4)} vePOWER
         </li>
         <li>
-          {t('Migrated:')} {formatNumber(proxyBalance, 2, 4)} veCAKE
+          {t('Migrated:')} {formatNumber(proxyBalance, 2, 4)} vePOWER
         </li>
       </ul>
       <br />
@@ -242,8 +242,8 @@ const ProxyUnlockTooltip: React.FC<{
     <>
       {t(
         proxyExpired
-          ? '%amount% CAKE from CAKE Pool migrated position is already unlocked. Go to the pool page to withdraw these CAKE.'
-          : '%amount% CAKE from CAKE Pool migrated position will unlock on %expiredAt%.',
+          ? '%amount% POWER from POWER Pool migrated position is already unlocked. Go to the pool page to withdraw these POWER.'
+          : '%amount% POWER from POWER Pool migrated position will unlock on %expiredAt%.',
         {
           amount: proxyCake,
           expiredAt: formatTime(Number(dayjs.unix(proxyUnlockTime))),

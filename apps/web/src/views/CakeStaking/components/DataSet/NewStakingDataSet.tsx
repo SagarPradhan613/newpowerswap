@@ -53,7 +53,7 @@ export const NewStakingDataSet: React.FC<{
           <DataRow
             label={
               <Text fontSize={14} color="textSubtle" textTransform="uppercase">
-                {t('CAKE to be locked')}
+                {t('POWER to be locked')}
               </Text>
             }
             value={<ValueText>{cakeAmount}</ValueText>}
@@ -62,7 +62,7 @@ export const NewStakingDataSet: React.FC<{
             label={
               <Tooltips
                 content={t(
-                  'The ratio factor between the amount of CAKE locked and the final veCAKE number. Extend your lock duration for a higher ratio factor.',
+                  'The ratio factor between the amount of POWER locked and the final vePOWER number. Extend your lock duration for a higher ratio factor.',
                 )}
               >
                 <TooltipText fontSize={14} fontWeight={400} color="textSubtle">
@@ -84,7 +84,7 @@ export const NewStakingDataSet: React.FC<{
             label={
               <Tooltips
                 content={t(
-                  'Once locked, your CAKE will be staked in veCAKE contract until this date. Early withdrawal is not available.',
+                  'Once locked, your POWER will be staked in vePOWER contract until this date. Early withdrawal is not available.',
                 )}
               >
                 <TooltipText fontSize={14} fontWeight={400} color="textSubtle">

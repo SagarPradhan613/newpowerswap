@@ -5,7 +5,7 @@ import { SupportedChainId } from './constants/supportedChains'
 
 export enum PredictionSupportedSymbol {
   BNB = 'BNB',
-  CAKE = 'CAKE',
+  CAKE = 'POWER',
   ETH = 'ETH',
   WBTC = 'WBTC',
 }

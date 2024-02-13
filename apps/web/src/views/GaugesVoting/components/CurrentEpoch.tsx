@@ -94,11 +94,11 @@ export const CurrentEpoch = () => {
         <AutoRow justifyContent="space-between">
           <Tooltips
             content={t(
-              'The total amount of CAKE rewards to distribute to all the gauges according to the final vote results.',
+              'The total amount of POWER rewards to distribute to all the gauges according to the final vote results.',
             )}
           >
             <TooltipText fontSize={14} color="textSubtle">
-              {t('CAKE rewards')}
+              {t('POWER rewards')}
             </TooltipText>
           </Tooltips>
 
@@ -107,23 +107,23 @@ export const CurrentEpoch = () => {
               {formatNumber(getBalanceNumber(new BN(weeklyRewards)), 0)}
             </Text>
             <Text fontSize={14}>
-              ({getFullDisplayBalance(new BN(weeklyRewards).div(2 * 7 * 24 * 60 * 60), 18, 3)} CAKE/sec){' '}
+              ({getFullDisplayBalance(new BN(weeklyRewards).div(2 * 7 * 24 * 60 * 60), 18, 3)} POWER/sec){' '}
             </Text>
           </FlexGap>
         </AutoRow>
         <AutoRow justifyContent="space-between">
-          <Tooltips content={t('The total number of veCAKE votes being casted.')}>
+          <Tooltips content={t('The total number of vePOWER votes being casted.')}>
             <TooltipText fontSize={14} color="textSubtle">
               {t('Total votes')}
             </TooltipText>
           </Tooltips>
-          <Balance bold fontSize={16} value={getBalanceNumber(new BN(totalWeight.toString()))} unit=" veCAKE" />
+          <Balance bold fontSize={16} value={getBalanceNumber(new BN(totalWeight.toString()))} unit=" vePOWER" />
         </AutoRow>
         <AutoRow alignItems="center" flexDirection="row" justifyContent="flex-start" flexWrap="nowrap" mt="16px">
           <ErrorIcon color="#7A6EAA" width="24px" mr="8px" />
           <Text color="textSubtle" fontSize={12}>
             {t(
-              'Results are updated weekly. Vote numbers are estimations based on the veCAKE balance at 00:00 UTC on the upcoming Thursday.',
+              'Results are updated weekly. Vote numbers are estimations based on the vePOWER balance at 00:00 UTC on the upcoming Thursday.',
             )}
           </Text>
         </AutoRow>

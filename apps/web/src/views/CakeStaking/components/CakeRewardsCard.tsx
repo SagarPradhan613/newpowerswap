@@ -160,7 +160,7 @@ export const CakeRewardsCard = ({ onDismiss }) => {
 
   return (
     <ModalContainer
-      title={t('CAKE Reward / Yield')}
+      title={t('POWER Reward / Yield')}
       style={{ minWidth: '375px', padding: isDesktop ? '24px' : '24px 24px 0 24px' }}
     >
       <AtomBox
@@ -173,7 +173,7 @@ export const CakeRewardsCard = ({ onDismiss }) => {
       >
         <StyledModalHeader headerBorderColor="transparent">
           <ModalTitle>
-            <Heading scale="md">{t('CAKE Reward / Yield')}</Heading>
+            <Heading scale="md">{t('POWER Reward / Yield')}</Heading>
           </ModalTitle>
           <ModalCloseButton onDismiss={onDismiss} />
         </StyledModalHeader>
@@ -181,14 +181,14 @@ export const CakeRewardsCard = ({ onDismiss }) => {
         <ModalBody style={{ marginLeft: '-24px', marginRight: '-24px', paddingLeft: '24px', paddingRight: '24px' }}>
           <Row>
             <Text fontSize="16px" bold color="secondary">
-              {t('EARN CAKE')}
+              {t('EARN POWER')}
             </Text>
             <Text fontSize="16px" bold color="textSubtle" ml="3px">
               {t('WEEKLY')}
             </Text>
           </Row>
           <Text fontSize="14px" color="textSubtle" mb="16px" mt="13px">
-            {t('From CAKE pool rewards and revenue sharing!')}
+            {t('From POWER pool rewards and revenue sharing!')}
           </Text>
           <MyVeCakeCard />
           <Card mt="16px" style={{ overflow: 'unset' }} mb={isDesktop ? '0' : '24px'}>
@@ -279,7 +279,7 @@ export const CakeRewardsCard = ({ onDismiss }) => {
                     tooltipComponent={
                       <div>
                         <p>
-                          {t('CAKE Pool:')}{' '}
+                          {t('POWER Pool:')}{' '}
                           <Text bold style={{ display: 'inline' }}>
                             {cakePoolAPR.toFixed(2)}%
                           </Text>
@@ -293,7 +293,7 @@ export const CakeRewardsCard = ({ onDismiss }) => {
                         <br />
                         <p>
                           {t(
-                            'CAKE Pool APR is calculated based on the voting result and the emission of the veCAKE Pool gauge.',
+                            'POWER Pool APR is calculated based on the voting result and the emission of the vePOWER Pool gauge.',
                           )}
                         </p>
                         <br />
@@ -312,7 +312,7 @@ export const CakeRewardsCard = ({ onDismiss }) => {
 
                 <Box mt="16px">
                   <Text fontSize={12} bold color="secondary" textTransform="uppercase">
-                    {t('cake pool')}
+                    {t('POWER pool')}
                   </Text>
                   <Flex mt="8px" flexDirection="row" alignItems="start">
                     <BenefitsTooltipsText
@@ -321,9 +321,9 @@ export const CakeRewardsCard = ({ onDismiss }) => {
                     />
                     <Box>
                       {availableCakePoolCake > 0 && availableCakePoolCake <= 0.01 ? (
-                        <Text bold textAlign="right">{`< 0.01 CAKE`}</Text>
+                        <Text bold textAlign="right">{`< 0.01 POWER`}</Text>
                       ) : (
-                        <Balance unit=" CAKE" textAlign="right" bold value={availableCakePoolCake} decimals={2} />
+                        <Balance unit=" POWER" textAlign="right" bold value={availableCakePoolCake} decimals={2} />
                       )}
                       <Balance
                         ml="4px"
@@ -352,7 +352,13 @@ export const CakeRewardsCard = ({ onDismiss }) => {
                       {availableRevenueSharingCake > 0 && availableRevenueSharingCake <= 0.01 ? (
                         <Text bold textAlign="right">{`< 0.01 CAKE`}</Text>
                       ) : (
-                        <Balance unit=" CAKE" textAlign="right" bold value={availableRevenueSharingCake} decimals={2} />
+                        <Balance
+                          unit=" POWER"
+                          textAlign="right"
+                          bold
+                          value={availableRevenueSharingCake}
+                          decimals={2}
+                        />
                       )}
                       <Balance
                         ml="4px"
@@ -375,13 +381,13 @@ export const CakeRewardsCard = ({ onDismiss }) => {
                   <Flex mt="8px" flexDirection="row" alignItems="start">
                     <BenefitsTooltipsText
                       title={t('Available for claiming')}
-                      tooltipComponent={<Text>{t('Amount of revenue available for claiming in CAKE.')}</Text>}
+                      tooltipComponent={<Text>{t('Amount of revenue available for claiming in POWER.')}</Text>}
                     />
                     <Box>
                       {totalAvailableClaim > 0 && totalAvailableClaim <= 0.01 ? (
-                        <Text bold textAlign="right">{`< 0.01 CAKE`}</Text>
+                        <Text bold textAlign="right">{`< 0.01 POWER`}</Text>
                       ) : (
-                        <Balance unit=" CAKE" textAlign="right" bold value={totalAvailableClaim} decimals={2} />
+                        <Balance unit=" POWER" textAlign="right" bold value={totalAvailableClaim} decimals={2} />
                       )}
                       <Balance
                         ml="4px"

@@ -30,11 +30,9 @@ const StyledFlex = styled(Flex)`
 const StyledTabToggle = styled(TabToggle)`
   cursor: pointer;
   
-  background-color: ${({ theme, isActive }) =>
-    isActive ? (theme.isDark ? 'rgb(45,48,72)' : '#58FFA4') : 'transparent'};
+  background-color: ${({ theme, isActive }) => (isActive ? (theme.isDark ? '#58FFA4' : '#58FFA4') : 'transparent')};
   ${({ theme }) => theme.mediaQueries.sm} {
-    background-color: ${({ theme, isActive }) =>
-      isActive ? (theme.isDark ? 'rgb(45,48,72)' : '#58FFA4') : 'transparent'};
+    background-color: ${({ theme, isActive }) => (isActive ? (theme.isDark ? '#58FFA4' : '#58FFA4') : 'transparent')};
   }
   color: ${({ theme, isActive }) => (isActive ? (theme.isDark ? 'black' : 'black') : 'white')};
 };

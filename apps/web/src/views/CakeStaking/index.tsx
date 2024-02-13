@@ -44,7 +44,7 @@ const CakeStaking = () => {
         <PageHead />
         <LockCake />
         <Heading scale="xl" color="secondary" mt={['40px', '40px', '45px']} mb={['24px', '24px', '48px']}>
-          {t('Benefits of veCAKE')}
+          {t('Benefits of vePOWER')}
         </Heading>
         <Grid
           maxWidth="820px"
@@ -59,13 +59,13 @@ const CakeStaking = () => {
               <QuestionHelper
                 size="20px"
                 text={t(
-                  'Claim freshly cooked CAKE rewards weekly on Thursday from veCAKE gauge emission as well as trading revenue sharing.',
+                  'Claim freshly cooked POWER rewards weekly on Thursday from vePOWER gauge emission as well as trading revenue sharing.',
                 )}
                 placement="top"
                 ml="4px"
               />
             }
-            dataText={`${formatNumber(Number(formatBigInt(totalCakeDistributed)))} CAKE`}
+            dataText={`${formatNumber(Number(formatBigInt(totalCakeDistributed)))} POWER`}
             onClick={() => {
               setCakeRewardModalVisible(true)
             }}
@@ -75,7 +75,7 @@ const CakeStaking = () => {
               <QuestionHelper
                 size="20px"
                 text={t(
-                  'Use your veCAKE to vote on your favourite farms, position managers, reward pools, and any CAKE emission products, increase their allocations, and get more CAKE rewards.',
+                  'Use your vePOWER to vote on your favourite farms, position managers, reward pools, and any POWER emission products, increase their allocations, and get more POWER rewards.',
                 )}
                 placement="top"
                 ml="4px"
@@ -87,7 +87,7 @@ const CakeStaking = () => {
           />
         </Grid>
       </StyledPageHeader>
-      <Page title={t('CAKE Staking')}>
+      <Page title={t('POWER Staking')}>
         <Heading scale="xl" mb={['24px', '24px', '48px']} mt={['16px', '16px', 0]}>
           {t('And So Much More...')}
         </Heading>
@@ -104,7 +104,7 @@ const CakeStaking = () => {
               <QuestionHelper
                 size="20px"
                 text={t(
-                  'Boost your PancakeSwap farming APR by up to 2.5x. Aquire more veCAKE to receive a higher boost.',
+                  'Boost your POWERSWAP farming APR by up to 2.5x. Aquire more vePOWER to receive a higher boost.',
                 )}
                 placement="top"
                 ml="4px"
@@ -118,7 +118,7 @@ const CakeStaking = () => {
               <QuestionHelper
                 size="20px"
                 text={t(
-                  'Use veCAKE as your Snapshot voting power to vote on governance proposals. Including important protocol decisions, and adding new farming gauges.',
+                  'Use vePOWER as your Snapshot voting power to vote on governance proposals. Including important protocol decisions, and adding new farming gauges.',
                 )}
                 placement="top"
                 ml="4px"
@@ -132,7 +132,7 @@ const CakeStaking = () => {
               <QuestionHelper
                 size="20px"
                 text={t(
-                  'Use your veCAKE as your IFO Public Sales commit credits. Aquire more veCAKE to commit more in the next PancakeSwap IFOs.',
+                  'Use your vePOWER as your IFO Public Sales commit credits. Aquire more vePOWER to commit more in the next POWERSWAP IFOs.',
                 )}
                 placement="top"
                 ml="4px"

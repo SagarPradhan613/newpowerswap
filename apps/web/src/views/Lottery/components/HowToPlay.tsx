@@ -328,16 +328,16 @@ const HowToPlay: React.FC<React.PropsWithChildren> = () => {
             </li>
           </BulletList>
           <Heading my="16px" scale="md">
-            {t('CAKE Injections')}
+            {t('POWER Injections')}
           </Heading>
           <BulletList>
             <li>
               <Text display="inline" color="textSubtle">
                 {t(
-                  'An average total of 35,000 CAKE from the treasury is added to lottery rounds over the course of a week. This CAKE is of course also included in rollovers! Read more in our guide to ',
+                  'An average total of 35,000 POWER from the treasury is added to lottery rounds over the course of a week. This CAKE is of course also included in rollovers! Read more in our guide to ',
                 )}
                 <InlineLink href="https://docs.pancakeswap.finance/tokenomics/cake/cake-tokenomics">
-                  {t('CAKE Tokenomics')}
+                  {t('POWER Tokenomics')}
                 </InlineLink>
               </Text>
             </li>

@@ -177,7 +177,7 @@ const CakeDataRow = () => {
 
         {emissionsPerBlock ? (
           <Heading color="secondary" scale="lg">
-            {t('%cakeEmissions%/block', { cakeEmissions: formatNumber(emissionsPerBlock) })}
+            {t('%powerEmissions%/block', { cakeEmissions: formatNumber(emissionsPerBlock) })}
           </Heading>
         ) : (
           <Skeleton height={24} width={126} my="4px" />

@@ -424,7 +424,8 @@ export function WalletModalV2<T = unknown>(props: WalletModalV2Props<T>) {
       wallets
         .map((w) => w.icon)
         .filter((icon) => typeof icon === 'string')
-        .concat('https://cdn.pancakeswap.com/wallets/wallet_intro.png') as string[],
+        // .concat('https://cdn.pancakeswap.com/wallets/wallet_intro.png') as string[],
+        .concat('/images/newpowerswapimg.png') as string[],
     [wallets],
   )
 
@@ -481,7 +482,8 @@ const Intro = ({ docLink, docText }: { docLink: string; docText: string }) => {
       <Heading as="h1" fontSize="20px" color="secondary">
         {t('Haven’t got a wallet yet?')}
       </Heading>
-      <Image src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width={198} height={178} />
+      {/* <Image src="https://cdn.pancakeswap.com/wallets/wallet_intro.png" width={198} height={178} /> */}
+      <img src="/images/newpowerswapimg.png" style={{ width: '158px' }} alt="swap" />
       <Button
         style={{ backgroundColor: '#58FFA4' }}
         as={LinkExternal}

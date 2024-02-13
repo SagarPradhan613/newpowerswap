@@ -79,9 +79,9 @@ const WinRateModal: React.FC<React.PropsWithChildren<WinRateModalProps>> = ({
     setCalculatorMode(CalculatorMode.WIN_RATE_BASED_ON_PRINCIPAL)
   }
 
-  const editingUnit = editingCurrency === EditingCurrency.TOKEN ? 'CAKE' : 'USD'
+  const editingUnit = editingCurrency === EditingCurrency.TOKEN ? 'POWER' : 'USD'
   const editingValue = editingCurrency === EditingCurrency.TOKEN ? principalAsToken : principalAsUSD
-  const conversionUnit = editingCurrency === EditingCurrency.TOKEN ? 'USD' : 'CAKE'
+  const conversionUnit = editingCurrency === EditingCurrency.TOKEN ? 'USD' : 'POWER'
   const conversionValue = editingCurrency === EditingCurrency.TOKEN ? principalAsUSD : principalAsToken
   const onUserInput = editingCurrency === EditingCurrency.TOKEN ? setPrincipalFromTokenValue : setPrincipalFromUSDValue
 
@@ -96,7 +96,7 @@ const WinRateModal: React.FC<React.PropsWithChildren<WinRateModalProps>> = ({
         <Flex flexDirection="column" mb="8px">
           <Box>
             <Text color="secondary" bold fontSize="12px" textTransform="uppercase" as="span">
-              Cake
+              POWER
             </Text>
             <Text color="textSubtle" ml="4px" bold fontSize="12px" textTransform="uppercase" as="span">
               {t('Deposit')}

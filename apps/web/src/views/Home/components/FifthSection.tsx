@@ -141,6 +141,8 @@ const ButtonContainer = styled.div`
   display: flex;
   gap: 10px;
   margin-top: 2rem;
+  position: relative;
+  z-index: 99;
 `
 
 const floatAnimation = keyframes`
@@ -247,11 +249,7 @@ const FifthSection = () => {
           </ForthMainPara>
 
           <ButtonContainer>
-            <a
-              href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&chainId=56"
-              rel="noreferrer"
-              target="_blank"
-            >
+            <a href="/swap" rel="noreferrer" target="_blank">
               <Button
                 scale="md"
                 style={{ borderRadius: isXs ? 12 : undefined, padding: '0 2rem', width: '184px' }}
@@ -265,7 +263,7 @@ const FifthSection = () => {
               style={{ marginRight: '10px' }}
               rel="noreferrer"
               target="_blank"
-              href="https://docs.pancakeswap.finance/governance-and-tokenomics/cake-tokenomics"
+              href="https://powerswap-2.gitbook.io/powerswap/"
             >
               <Button
                 scale="md"

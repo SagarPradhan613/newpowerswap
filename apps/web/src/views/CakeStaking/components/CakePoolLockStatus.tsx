@@ -57,7 +57,7 @@ export const CakePoolLockInfo = () => {
         <RowBetween>
           <AutoColumn>
             <Text fontSize={12} color="textSubtle" textTransform="uppercase" bold>
-              {t('cake locked')}
+              {t('POWER locked')}
             </Text>
             <Balance value={cakeAmount} decimals={2} fontWeight={600} fontSize={20} />
             <Balance prefix="~" value={cakeAmountUsdValue} decimals={2} unit="USD" fontSize={12} />
@@ -75,13 +75,13 @@ export const CakePoolLockInfo = () => {
           </AutoColumn>
         </RowBetween>
         <Button width="100%" onClick={migrate}>
-          {t('Migrate to veCAKE')}
+          {t('Migrate to vePOWER')}
         </Button>
       </StyledLockedCard>
       <Message variant="warning" icon={<InfoFilledIcon color="#D67E0A" />}>
         <Text as="p" color="#D67E0A">
           {t(
-            'Migrate your CAKE staking position to veCAKE and enjoy the benefits of weekly CAKE yield, revenue share, gauges voting, farm yield boosting, participating in IFOs, and so much more!',
+            'Migrate your POWER staking position to vePOWER and enjoy the benefits of weekly POWER yield, revenue share, gauges voting, farm yield boosting, participating in IFOs, and so much more!',
           )}
         </Text>
       </Message>
@@ -97,7 +97,7 @@ export const CakePoolLockStatus = () => {
         <CardHeader>
           <RowBetween>
             <AutoColumn>
-              <Heading color="text">{t('My VeCAKE')}</Heading>
+              <Heading color="text">{t('My VePOWER')}</Heading>
               <Balance fontSize="20px" bold color="failure" value={0} decimals={2} />
             </AutoColumn>
             <img srcSet="/images/cake-staking/token-vecake.png 2x" alt="token-vecake" />

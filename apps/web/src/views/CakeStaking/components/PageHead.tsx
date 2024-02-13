@@ -54,7 +54,7 @@ const Heading = () => {
   return (
     <Flex alignItems="baseline" justifyContent={staking ? 'space-between' : undefined}>
       <Text lineHeight="110%" bold color="secondary" mb="16px" fontSize={['32px', '32px', '64px', '64px']}>
-        {t('CAKE Staking')}
+        {t('POWER Staking')}
       </Text>
       {isMobile ? (
         <Link
@@ -104,7 +104,7 @@ const Description = () => {
       <DescriptionContent fullSize={staking}>
         <Text color="textSubtle" lineHeight="120%">
           {t(
-            'Enjoy the benefits of weekly CAKE yield, revenue share, gauges voting, farm yield boosting, participating in IFOs, and so much more!',
+            'Enjoy the benefits of weekly POWER yield, revenue share, gauges voting, farm yield boosting, participating in IFOs, and so much more!',
           )}
         </Text>
       </DescriptionContent>

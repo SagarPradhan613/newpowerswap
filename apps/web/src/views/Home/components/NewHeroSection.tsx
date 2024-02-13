@@ -242,7 +242,7 @@ const NewHeroSection = () => {
               style={{ marginRight: '10px' }}
               rel="noreferrer"
               target="_blank"
-              href="https://docs.pancakeswap.finance/governance-and-tokenomics/cake-tokenomics"
+              href="https://powerswap-2.gitbook.io/powerswap/"
             >
               <Button
                 scale="md"
