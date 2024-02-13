@@ -14,7 +14,7 @@ const StaticAmount: React.FC<React.PropsWithChildren<StaticAmountPropsType>> = (
   return (
     <>
       <Text color="textSubtle" textTransform="uppercase" bold fontSize="12px">
-        {t('Add CAKE to lock')}
+        {t('Add POWER to lock')}
       </Text>
       <Flex alignItems="center" justifyContent="space-between" mb="16px">
         <Box>
@@ -29,9 +29,11 @@ const StaticAmount: React.FC<React.PropsWithChildren<StaticAmountPropsType>> = (
           />
         </Box>
         <Flex alignItems="center" minWidth="70px">
-          <Image src={`/images/tokens/${stakingAddress}.png`} width={24} height={24} alt={stakingSymbol} />
+          {/* <Image src={`/images/tokens/${stakingAddress}.png`} width={24} height={24} alt={stakingSymbol} /> */}
+          <img src="/images/newpowerswapimg.png" style={{ width: '24px', height: '24px' }} alt="stalkingsymbol" />
           <Text ml="4px" bold>
-            {stakingSymbol}
+            {/* {stakingSymbol} */}
+            POWER
           </Text>
         </Flex>
       </Flex>

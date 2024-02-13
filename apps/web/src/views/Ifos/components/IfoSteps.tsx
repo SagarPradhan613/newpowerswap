@@ -116,12 +116,12 @@ const Step1 = ({
   return (
     <CardBody>
       <Heading as="h4" color="secondary" mb="16px">
-        {t('Lock CAKE in the CAKE pool')}
+        {t('Lock POWER in the POWER pool')}
       </Heading>
       <Box>
         <Text mb="4px" color="textSubtle" small>
           {t(
-            'The maximum amount of CAKE you can commit to the Public Sale equals the number of your iCAKE, which is based on your veCAKE balance at the snapshot time of each IFO. Lock more CAKE for longer durations to increase the maximum CAKE you can commit to the sale.',
+            'The maximum amount of POWER you can commit to the Public Sale equals the number of your iPOWER, which is based on your vePOWER balance at the snapshot time of each IFO. Lock more POWER for longer durations to increase the maximum POWER you can commit to the sale.',
           )}
         </Text>
         <Link
@@ -131,10 +131,10 @@ const Step1 = ({
           small
           href="https://docs.pancakeswap.finance/products/ifo-initial-farm-offering/icake#how-is-icake-calculated"
         >
-          {t('How does the number of iCAKE calculated?')}
+          {t('How does the number of iPOWER calculated?')}
         </Link>
         <Text mt="4px" color="textSubtle" small>
-          {t('Missed this IFO? Lock CAKE today for the next IFO, while enjoying a wide range of veCAKE benefits!')}
+          {t('Missed this IFO? Lock POWER today for the next IFO, while enjoying a wide range of vePOWER benefits!')}
         </Text>
       </Box>
       {hasProfile && (
@@ -146,7 +146,7 @@ const Step1 = ({
             />
           }
           credit={sourceChainIfoCredit}
-          title={t('Your ICAKE')}
+          title={t('Your IPOWER')}
           more={
             <Text fontSize="12px" color="textSubtle">
               {creditDollarValue !== undefined ? (
@@ -174,17 +174,17 @@ const Step2 = ({ hasProfile, isLive, isCommitted }: { hasProfile: boolean; isLiv
   return (
     <CardBody>
       <Heading as="h4" color="secondary" mb="1rem">
-        {t('Commit CAKE')}
+        {t('Commit POWER')}
       </Heading>
       <Text color="textSubtle" small>
-        {t('When the IFO sales are live, you can click “commit” to commit CAKE and buy the tokens being sold.')}
+        {t('When the IFO sales are live, you can click “commit” to commit POWER and buy the tokens being sold.')}
       </Text>
       <Text color="textSubtle" small mt="1rem">
-        {t('You will need a separate amount of CAKE in your wallet balance to commit to the IFO sales.')}
+        {t('You will need a separate amount of POWER in your wallet balance to commit to the IFO sales.')}
       </Text>
       {hasProfile && isLive && !isCommitted && (
         <Button as="a" href="#current-ifo" mt="1rem">
-          {t('Commit CAKE')}
+          {t('Commit POWER')}
         </Button>
       )}
     </CardBody>
@@ -258,23 +258,23 @@ const IfoSteps: React.FC<React.PropsWithChildren<TypeProps>> = ({
           {t('Claim your tokens')}
         </Heading>
         <Text color="textSubtle" small>
-          {t('After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent CAKE.')}
+          {t('After the IFO sales finish, you can claim any IFO tokens that you bought, and any unspent POWER.')}
         </Text>
       </CardBody>
     )
     const renderBridge = () => (
       <CardBody>
         <Heading as="h4" color="secondary" mb="16px">
-          {t('Bridge iCAKE')}
+          {t('Bridge iPOWER')}
         </Heading>
         <Text color="textSubtle" small>
           {t(
-            'To participate in the cross chain Public Sale, you need to bridge your iCAKE to the blockchain where the IFO will be hosted on.',
+            'To participate in the cross chain Public Sale, you need to bridge your iPOWER to the blockchain where the IFO will be hosted on.',
           )}
         </Text>
         <Text color="textSubtle" small mt="1rem">
           {t(
-            'Before or during the sale, you may bridge you iCAKE again if you’ve added more CAKE or extended your lock staking position.',
+            'Before or during the sale, you may bridge you iPOWER again if you’ve added more POWER or extended your lock staking position.',
           )}
         </Text>
         {sourceChainHasICake && (

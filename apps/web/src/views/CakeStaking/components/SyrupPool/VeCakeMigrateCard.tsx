@@ -23,10 +23,10 @@ export const VeCakeMigrateCard: React.FC<{ isTableView?: boolean; lockEndTime?: 
           <Box>
             <Text color="white" bold fontSize={14} pr="20px">
               {isMigratedToVeCake ? (
-                t('Your CAKE pool position has been migrated to veCAKE.')
+                t('Your POWER pool position has been migrated to vePOWER.')
               ) : (
                 <>
-                  {t('All fixed term staking positions must migrate to veCAKE to continue receiving rewards.')}
+                  {t('All fixed term staking positions must migrate to vePOWER to continue receiving rewards.')}
                   <LearnMoreLink />
                 </>
               )}
@@ -34,7 +34,7 @@ export const VeCakeMigrateCard: React.FC<{ isTableView?: boolean; lockEndTime?: 
             {isMigratedToVeCake && (
               <Text mt="10px" color="white" bold fontSize={14} pr="20px">
                 {t(
-                  'Extending or adding CAKE is not available for migrated positions. You will be able to withdraw CAKE when the lock ends.',
+                  'Extending or adding CAKE is not available for migrated positions. You will be able to withdraw POWER when the lock ends.',
                 )}
                 <LearnMoreLink />
               </Text>

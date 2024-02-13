@@ -245,9 +245,15 @@ const VaultStakeModal: React.FC<React.PropsWithChildren<VaultStakeModalProps>> =
       <Flex alignItems="center" justifyContent="space-between" mb="8px">
         <Text bold>{isRemovingStake ? t('Unstake') : t('Stake')}:</Text>
         <Flex alignItems="center" minWidth="70px">
-          <Image src={`/images/tokens/${stakingToken.address}.png`} width={24} height={24} alt={stakingToken.symbol} />
+          {/* <Image src={`/images/tokens/${stakingToken.address}.png`} width={24} height={24} alt={stakingToken.symbol} /> */}
+          <img
+            src="/images/newpowerswapimg.png"
+            style={{ height: '24px', width: '24px', marginTop: '15px' }}
+            alt="power"
+          />
           <Text ml="4px" bold>
-            {stakingToken.symbol}
+            {/* {stakingToken.symbol} */}
+            POWER
           </Text>
         </Flex>
       </Flex>
@@ -337,7 +343,8 @@ const VaultStakeModal: React.FC<React.PropsWithChildren<VaultStakeModalProps>> =
       {!isRemovingStake && (
         <Button mt="8px" as="a" external href={getTokenLink} variant="secondary">
           {/* {t('Add %symbol%', { symbol: stakingToken.symbol })} */}
-          {t('Add %symbol%', { symbol: lpLabel === 'CAKE' ? 'POWER' : lpLabel })}
+          {/* {t('Add %symbol%', { symbol: lpLabel === 'CAKE' ? 'POWER' : lpLabel })} */}
+          Get POWER
         </Button>
       )}
     </Modal>
