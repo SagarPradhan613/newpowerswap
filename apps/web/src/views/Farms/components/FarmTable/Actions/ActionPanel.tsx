@@ -281,7 +281,8 @@ export const ActionPanelV3: FC<ActionPanelV3Props> = ({
             {isActive && (
               <Flex mb="2px" justifyContent={alignLinksToRight ? 'flex-end' : 'flex-start'}>
                 <StyledText color="primary" onClick={addLiquidityModal.onOpen}>
-                  {t('Add %symbol%', { symbol: lpLabel })}
+                  {/* {t('Add %symbol%', { symbol: lpLabel })} */}
+                  {t('Add %symbol%', { symbol: lpLabel === 'CAKE' ? 'POWER' : lpLabel })}
                 </StyledText>
               </Flex>
             )}
@@ -411,7 +412,8 @@ export const ActionPanelV2: React.FunctionComponent<React.PropsWithChildren<Acti
             {isActive && (
               <Flex mb="2px" justifyContent={alignLinksToRight ? 'flex-end' : 'flex-start'}>
                 <StyledText color="primary" onClick={addLiquidityModal.onOpen}>
-                  {t('Add %symbol%', { symbol: lpLabel })}
+                  {/* {t('Add %symbol%', { symbol: lpLabel })} */}
+                  {t('Add %symbol%', { symbol: lpLabel === 'CAKE' ? 'POWER' : lpLabel })}
                 </StyledText>
               </Flex>
             )}

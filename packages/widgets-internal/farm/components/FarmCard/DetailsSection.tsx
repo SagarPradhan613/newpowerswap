@@ -113,10 +113,14 @@ export const DetailsSection: React.FC<React.PropsWithChildren<ExpandableSectionP
         <Flex mb="2px" justifyContent={alignLinksToRight ? "flex-end" : "flex-start"}>
           {onAddLiquidity ? (
             typeof onAddLiquidity === "string" ? (
-              <StyledLinkExternal href={onAddLiquidity}>{t("Add %symbol%", { symbol: lpLabel })}</StyledLinkExternal>
+              // <StyledLinkExternal href={onAddLiquidity}>{t("Add %symbol%", { symbol: lpLabel })}</StyledLinkExternal>
+              <StyledLinkExternal href={onAddLiquidity}>
+                {t("Add %symbol%", { symbol: lpLabel === "CAKE" ? "POWER" : lpLabel })}
+              </StyledLinkExternal>
             ) : (
               <StyledText color="primary" onClick={onAddLiquidity}>
-                {t("Add %symbol%", { symbol: lpLabel })}
+                {/* {t("Add %symbol%", { symbol: lpLabel })} */}
+                linkLabel={t("Add %symbol%", { symbol: lpLabel === "CAKE" ? "POWER" : lpLabel })}
               </StyledText>
             )
           ) : null}

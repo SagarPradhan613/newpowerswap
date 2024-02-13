@@ -64,7 +64,8 @@ const FarmCard: React.FC<React.PropsWithChildren<FarmCardProps>> = ({
     quoteTokenAddress: farm.quoteToken?.address,
     tokenAddress: farm.token?.address,
   })
-  const addLiquidityUrl = `/add/${liquidityUrlPathParts}`
+  // const addLiquidityUrl = `/add/${liquidityUrlPathParts}`
+  const addLiquidityUrl = `/swap`
   const isPromotedFarm = farm.token?.symbol === 'Power'
 
   const multiplierTooltipContent = FarmMultiplierInfo({

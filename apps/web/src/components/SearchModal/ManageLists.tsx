@@ -59,6 +59,102 @@ function listUrlRowHTMLId(listUrl: string) {
   return `list-row-${listUrl.replace(/\./g, '-')}`
 }
 
+// const ListRow = memo(function ListRow({ listUrl }: { listUrl: string }) {
+//   const { chainId } = useActiveChainId()
+//   const { t } = useTranslation()
+//   const isActive = useIsListActive(listUrl)
+
+//   const listsByUrl = useAtomValue(selectorByUrlsAtom)
+//   const [, dispatch] = useListState()
+//   const { current: list, pendingUpdate: pending } = listsByUrl[listUrl]
+
+//   const activeTokensOnThisChain = useMemo(() => {
+//     if (!list || !chainId) {
+//       return 0
+//     }
+//     return list.tokens.reduce((acc, cur) => (cur.chainId === chainId ? acc + 1 : acc), 0)
+//   }, [chainId, list])
+
+//   const handleAcceptListUpdate = useCallback(() => {
+//     if (!pending) return
+//     dispatch(acceptListUpdate(listUrl))
+//   }, [dispatch, listUrl, pending])
+
+//   const handleRemoveList = useCallback(() => {
+//     // eslint-disable-next-line no-alert
+//     if (window.confirm('Please confirm you would like to remove this list')) {
+//       dispatch(removeList(listUrl))
+//     }
+//   }, [dispatch, listUrl])
+
+//   const handleEnableList = useCallback(() => {
+//     dispatch(enableList(listUrl))
+//   }, [dispatch, listUrl])
+
+//   const handleDisableList = useCallback(() => {
+//     dispatch(disableList(listUrl))
+//   }, [dispatch, listUrl])
+
+//   const { targetRef, tooltip, tooltipVisible } = useTooltip(
+//     <div>
+//       <Text>{list && listVersionLabel(list.version)}</Text>
+//       <LinkExternal external href={`https://tokenlists.org/token-list?url=${listUrl}`}>
+//         {t('See')}
+//       </LinkExternal>
+//       <Button variant="danger" scale="xs" onClick={handleRemoveList} disabled={Object.keys(listsByUrl).length === 1}>
+//         {t('Remove')}
+//       </Button>
+//       {pending && (
+//         <Button variant="text" onClick={handleAcceptListUpdate} style={{ fontSize: '12px' }}>
+//           {t('Update list')}
+//         </Button>
+//       )}
+//     </div>,
+//     { placement: 'right-end', trigger: 'click', isInPortal: false },
+//   )
+
+//   if (!list) return null
+
+//   return (
+//     <RowWrapper
+//       active={isActive}
+//       hasActiveTokens={activeTokensOnThisChain > 0}
+//       key={listUrl}
+//       id={listUrlRowHTMLId(listUrl)}
+//     >
+//       {tooltipVisible && tooltip}
+//       {list.logoURI ? (
+//         <ListLogo size="40px" style={{ marginRight: '1rem' }} logoURI={list.logoURI} alt={`${list.name} list logo`} />
+//       ) : (
+//         <div style={{ width: '24px', height: '24px', marginRight: '1rem' }} />
+//       )}
+//       <Column style={{ flex: '1' }}>
+//         <Row>
+//           <Text bold>{list.name}</Text>
+//         </Row>
+//         <RowFixed mt="4px">
+//           <Text fontSize="12px" mr="6px" textTransform="lowercase">
+//             {list.tokens.length} {t('Tokens')}
+//           </Text>
+//           <span ref={targetRef}>
+//             <CogIcon color="text" width="12px" />
+//           </span>
+//         </RowFixed>
+//       </Column>
+//       <Toggle
+//         checked={isActive}
+//         onChange={() => {
+//           if (isActive) {
+//             handleDisableList()
+//           } else {
+//             handleEnableList()
+//           }
+//         }}
+//       />
+//     </RowWrapper>
+//   )
+// })
+
 const ListRow = memo(function ListRow({ listUrl }: { listUrl: string }) {
   const { chainId } = useActiveChainId()
   const { t } = useTranslation()
@@ -98,10 +194,10 @@ const ListRow = memo(function ListRow({ listUrl }: { listUrl: string }) {
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     <div>
       <Text>{list && listVersionLabel(list.version)}</Text>
-      <LinkExternal external href={`https://tokenlists.org/token-list?url=${listUrl}`}>
+      {/* <LinkExternal external href={`https://tokenlists.org/token-list?url=${listUrl}`}>
         {t('See')}
-      </LinkExternal>
-      <Button variant="danger" scale="xs" onClick={handleRemoveList} disabled={Object.keys(listsByUrl).length === 1}>
+      </LinkExternal> */}
+      <Button variant="primary" scale="xs" onClick={handleRemoveList} disabled={Object.keys(listsByUrl).length === 1}>
         {t('Remove')}
       </Button>
       {pending && (
@@ -113,7 +209,7 @@ const ListRow = memo(function ListRow({ listUrl }: { listUrl: string }) {
     { placement: 'right-end', trigger: 'click', isInPortal: false },
   )
 
-  if (!list) return null
+  if (!list || list.name.toLowerCase().includes('pancakeswap')) return null // Check if list name includes "pancakeswap" and return null if it does
 
   return (
     <RowWrapper

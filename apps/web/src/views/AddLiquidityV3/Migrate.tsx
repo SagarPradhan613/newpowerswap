@@ -739,7 +739,7 @@ function V2PairMigrate({
                     getSetFullRange()
                   }}
                   scale="md"
-                  variant="danger"
+                  variant="primary"
                 >
                   {t('I understand')}
                 </Button>

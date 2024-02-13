@@ -109,7 +109,7 @@ const NameCell: React.FC<React.PropsWithChildren<NameCellProps>> = ({ pool }) =>
             </Text>
             {showSubtitle && (
               <Text fontSize="12px" color="textSubtle">
-                {subtitle}
+                {typeof subtitle === 'string' ? subtitle.replace('CAKE', 'POWER') : subtitle}
               </Text>
             )}
             {!isMobile && isBoostedPool && (

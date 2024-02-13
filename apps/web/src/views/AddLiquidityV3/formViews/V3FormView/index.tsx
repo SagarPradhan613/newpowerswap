@@ -682,7 +682,7 @@ export default function V3FormView({
                       getSetFullRange()
                     }}
                     scale="md"
-                    variant="danger"
+                    variant="primary"
                   >
                     {t('I understand')}
                   </Button>

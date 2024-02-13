@@ -48,7 +48,7 @@ export const LockWeeksDataSet = () => {
         label={
           <Tooltips
             content={t(
-              'The ratio factor between the amount of CAKE locked and the final veCAKE number. Extend your lock duration for a higher ratio factor.',
+              'The ratio factor between the amount of POWER locked and the final vePOWER number. Extend your lock duration for a higher ratio factor.',
             )}
           >
             <TooltipText fontSize={12} bold color="textSubtle" textTransform="uppercase">
@@ -62,7 +62,7 @@ export const LockWeeksDataSet = () => {
         label={
           <Tooltips
             content={t(
-              'Once locked, your CAKE will be staked in veCAKE contract until this date. Early withdrawal is not available.',
+              'Once locked, your POWER will be staked in vePOWER contract until this date. Early withdrawal is not available.',
             )}
           >
             <TooltipText fontSize={12} bold color="textSubtle" textTransform="uppercase">

@@ -9,7 +9,7 @@ export const Migrate = () => {
   const { isDesktop } = useMatchBreakpoints()
   return (
     <StyledCard innerCardProps={{ padding: ['24px 16px', '24px 16px', '24px'] }}>
-      <Heading scale="md">{t('Migrate to get veCAKE')}</Heading>
+      <Heading scale="md">{t('Migrate to get vePOWER')}</Heading>
 
       <Grid gridTemplateColumns={isDesktop ? '1fr 1fr' : '1fr'} mt={32} gridColumnGap="24px" gridRowGap="24px">
         <LockCakeForm disabled />

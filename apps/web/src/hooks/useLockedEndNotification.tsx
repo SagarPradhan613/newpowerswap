@@ -21,7 +21,7 @@ const LockedEndDescription: React.FC = () => {
     <>
       <Text>{t('The locked staking duration has ended.')}</Text>
       <NextLinkFromReactRouter to="/pools" prefetch={false}>
-        <StyledLink color="primary">{t('Go to Pools')}</StyledLink>
+        <StyledLink color="primary">{t('Go to Raids')}</StyledLink>
       </NextLinkFromReactRouter>
     </>
   )

@@ -70,15 +70,15 @@ export const useBCakeTooltipContent = () => {
     <>
       <Box mb="20px">
         {t(
-          'Yield Boosters allow you to boost your farming yields by locking CAKE in the fixed-term staking CAKE pool. The more CAKE you lock, and the longer you lock them, the higher the boost you will receive.',
+          'Yield Boosters allow you to boost your farming yields by locking POWER in the fixed-term staking POWER pool. The more POWER you lock, and the longer you lock them, the higher the boost you will receive.',
         )}
       </Box>
-      <Box>
+      {/* <Box>
         {t('To learn more, check out the')}
         <Link target="_blank" href="https://medium.com/pancakeswap/introducing-bcake-farm-yield-boosters-b27b7a6f0f84">
           {t('Medium Article')}
         </Link>
-      </Box>
+      </Box> */}
     </>
   )
   return tooltipContent
@@ -132,7 +132,7 @@ const CardContent: React.FC = () => {
           {t('Connect wallet to view booster')}
         </Text>
         <Text color="textSubtle" fontSize={12} mb="16px">
-          {t('An active veCAKE staking position is required for activating farm yield boosters.')}
+          {t('An active vePOWER staking position is required for activating farm yield boosters.')}
         </Text>
         <ConnectWalletButton width="100%" style={{ backgroundColor: theme.colors.textSubtle }} />
       </Box>
@@ -141,14 +141,14 @@ const CardContent: React.FC = () => {
     return (
       <Box width="100%">
         <Text color="textSubtle" fontSize={12} bold>
-          {t('No CAKE locked')}
+          {t('No POWER locked')}
         </Text>
         <Text color="textSubtle" fontSize={12} mb="16px">
-          {t('An active veCAKE staking position is required for activating farm yield boosters.')}
+          {t('An active vePOWER staking position is required for activating farm yield boosters.')}
         </Text>
         <NextLink href="/cake-staking" passHref>
           <Button width="100%" style={{ backgroundColor: theme.colors.textSubtle }}>
-            {t('Go to CAKE Staking')}
+            {t('Go to POWER Staking')}
           </Button>
         </NextLink>
       </Box>
@@ -168,7 +168,7 @@ const CardContent: React.FC = () => {
       </Text>
       <NextLink href="/cake-staking" passHref>
         <Button width="100%" style={{ backgroundColor: theme.colors.textSubtle }}>
-          {t('Go to CAKE Staking')}
+          {t('Go to POWER Staking')}
         </Button>
       </NextLink>
     </Box>

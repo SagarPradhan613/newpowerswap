@@ -109,7 +109,7 @@ export const TradeSummary = memo(function TradeSummary({
                       'Fee ranging from 0.1% to 0.01% depending on the pool fee tier. You can check the fee tier by clicking the magnifier icon under the “Route” section.',
                     )}
                   </Text>
-                  <Text mt="12px">
+                  {/* <Text mt="12px">
                     <Link
                       style={{ display: 'inline' }}
                       ml="4px"
@@ -131,7 +131,7 @@ export const TradeSummary = memo(function TradeSummary({
                     {t(
                       'PancakeSwap does not charge any fees for trades. However, the market makers charge an implied fee of 0.05% - 0.25% (non-stablecoin) / 0.01% (stablecoin) factored into the quotes provided by them.',
                     )}
-                  </Text>
+                  </Text> */}
                 </>
               }
               ml="4px"

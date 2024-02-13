@@ -69,7 +69,7 @@ const farms: SerializedFarmConfig[] = [
   },
   {
     pid: 4,
-    lpSymbol: 'CAKE-BNB LP',
+    lpSymbol: 'POWER-BNB LP',
     lpAddress: '0xa96818CA65B57bEc2155Ba5c81a70151f63300CD',
     token: bscTestnetTokens.cake,
     quoteToken: bscTestnetTokens.wbnb,

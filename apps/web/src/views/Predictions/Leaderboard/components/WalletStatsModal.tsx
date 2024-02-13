@@ -73,7 +73,7 @@ const WalletStatsModal: React.FC<React.PropsWithChildren<WalletStatsModalProps>>
 
   return (
     <ModalWrapper minWidth="320px">
-      <ModalHeader background={theme.colors.gradientBubblegum}>
+      <ModalHeader>
         <Flex alignItems="center" style={{ flex: 1 }}>
           <Box width={['64px', null, null, null, null, null, '96px']} mr="16px">
             <ProfileAvatar src={profile?.nft?.image?.thumbnail ?? avatar} height={96} width={96} />

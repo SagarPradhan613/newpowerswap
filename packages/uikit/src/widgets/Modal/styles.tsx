@@ -70,7 +70,7 @@ export const ModalContainer = styled(MotionBox)`
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid ${({ theme }) => theme.colors.cardBorder};
+  // border: 1px solid ${({ theme }) => theme.colors.cardBorder};
   border-radius: 32px 32px 0px 0px;
   width: 100%;
   max-height: calc(var(--vh, 1vh) * 100);

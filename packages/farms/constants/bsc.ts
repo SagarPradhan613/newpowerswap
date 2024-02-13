@@ -983,7 +983,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 2,
     v1pid: 251,
-    lpSymbol: 'CAKE-BNB LP',
+    lpSymbol: 'POWER-BNB LP',
     lpAddress: CAKE_BNB_LP_MAINNET,
     token: bscTokens.cake,
     quoteToken: bscTokens.wbnb,
@@ -992,7 +992,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 39,
     v1pid: 389,
-    lpSymbol: 'CAKE-BUSD LP',
+    lpSymbol: 'POWER-BUSD LP',
     lpAddress: '0x804678fa97d91B974ec2af3c843270886528a9E6',
     boosted: true,
     token: bscTokens.cake,
@@ -1001,7 +1001,7 @@ const farms: SerializedFarmConfig[] = [
   {
     pid: 47,
     v1pid: 422,
-    lpSymbol: 'CAKE-USDT LP',
+    lpSymbol: 'POWER-USDT LP',
     lpAddress: '0xA39Af17CE4a8eb807E076805Da1e2B8EA7D0755b',
     token: bscTokens.cake,
     quoteToken: bscTokens.usdt,
@@ -1018,7 +1018,7 @@ const farms: SerializedFarmConfig[] = [
   //    * V3 by order of release (some may be out of PID order due to multiplier boost)
   {
     pid: 173,
-    lpSymbol: 'sdCAKE-CAKE LP',
+    lpSymbol: 'sdCAKE-POWER LP',
     lpAddress: '0xB1D54d76E2cB9425Ec9c018538cc531440b55dbB',
     token: bscTokens.cake,
     quoteToken: bscTokens.sdcake,
@@ -1029,7 +1029,7 @@ const farms: SerializedFarmConfig[] = [
   },
   {
     pid: 174,
-    lpSymbol: 'mCAKE-CAKE LP',
+    lpSymbol: 'mPOWER-POWER LP',
     lpAddress: '0xb9dC6396AcFFD24E0f69Dfd3231fDaeB31514D02',
     token: bscTokens.cake,
     quoteToken: bscTokens.mcake,

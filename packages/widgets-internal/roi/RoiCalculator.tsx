@@ -336,7 +336,7 @@ export function RoiCalculator({
 
   const stakeAndCompound = (
     <>
-      <Section title={t("Staked for")}>
+      <Section title={t("duration")}>
         <StakeSpan spanIndex={spanIndex} onSpanChange={setSpanIndex} />
       </Section>
       <Section title={t("Compounding every")}>

@@ -24,13 +24,16 @@ const bunnyButt = `"data:image/svg+xml,%3Csvg width='15' height='32' viewBox='0 
 
 const getBaseThumbStyles = ({ $isMax, disabled }: StyledInputProps) => `
   -webkit-appearance: none;
-  background-image: url(${$isMax ? bunnyHeadMax : bunnyHeadMain});
-  background-color: transparent;
+  // background-image: url(${$isMax ? bunnyHeadMax : bunnyHeadMain});
+  background-color: #58FFA4; 
+  // background-color: transparent;
+  border-radius: 50%; // Make it a circle
   box-shadow: none;
   border: 0;
   cursor: ${getCursorStyle};
   width: 24px;
-  height: 32px;
+  // height: 32px;
+  height:24px;
   filter: ${disabled ? "grayscale(100%)" : "none"};
   transform: translate(-2px, -2px);
   transition: 200ms transform;
@@ -56,7 +59,10 @@ export const SliderLabel = styled(Text)<SliderLabelProps>`
 `;
 
 export const BunnyButt = styled.div<DisabledProp>`
-  background: url(${bunnyButt}) no-repeat;
+  // background: url(${bunnyButt}) no-repeat;
+  background-color: #ff720d;
+  border-radius: 50%;
+  width: 32px;
   height: 32px;
   filter: ${({ disabled }) => (disabled ? "grayscale(100%)" : "none")};
   position: absolute;
@@ -71,7 +77,8 @@ export const BunnySlider = styled.div`
 
 export const StyledInput = styled.input<StyledInputProps>`
   cursor: ${getCursorStyle};
-  height: 32px;
+  // height: 32px;
+  height: 24px;
   position: relative;
   &::-webkit-slider-thumb {
     ${getBaseThumbStyles}

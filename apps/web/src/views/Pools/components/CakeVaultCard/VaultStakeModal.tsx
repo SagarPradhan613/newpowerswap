@@ -336,7 +336,8 @@ const VaultStakeModal: React.FC<React.PropsWithChildren<VaultStakeModalProps>> =
       )}
       {!isRemovingStake && (
         <Button mt="8px" as="a" external href={getTokenLink} variant="secondary">
-          {t('Add %symbol%', { symbol: stakingToken.symbol })}
+          {/* {t('Add %symbol%', { symbol: stakingToken.symbol })} */}
+          {t('Add %symbol%', { symbol: lpLabel === 'CAKE' ? 'POWER' : lpLabel })}
         </Button>
       )}
     </Modal>

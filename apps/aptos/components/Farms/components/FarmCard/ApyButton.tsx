@@ -69,7 +69,7 @@ const ApyButton: React.FC<React.PropsWithChildren<ApyButtonProps>> = ({
         {t('APR (incl. LP rewards)')}: <Text style={{ display: 'inline-block' }}>{`${displayApr}%`}</Text>
       </Text>
       <Text ml="5px">
-        {`*${t('Base APR (CAKE yield only)')}: ${apr.toLocaleString('en-US', {
+        {`*${t('Base APR (POWER yield only)')}: ${apr.toLocaleString('en-US', {
           maximumFractionDigits: 2,
         })}%`}
       </Text>

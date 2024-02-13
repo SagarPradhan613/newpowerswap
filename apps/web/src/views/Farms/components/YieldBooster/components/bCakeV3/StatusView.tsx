@@ -110,9 +110,9 @@ const useBCakeMessage = (
   const bCakeMessage = useMemo(() => {
     if (!account) return t('Connect wallet to activate yield booster')
     if (!isFarmStaking) return t('Start staking to activate yield booster.')
-    if (!locked) return t('Get veCAKE to activate yield booster')
+    if (!locked) return t('Get vePOWER to activate yield booster')
     if (shouldUpdate) return t('Click to update and increase your boosts.')
-    if (isLockEnd) return t('Renew your CAKE staking to activate yield booster')
+    if (isLockEnd) return t('Renew your POWER staking to activate yield booster')
     if (isReachedMaxBoostLimit && canBoostedButNot) return t('Unset other boosters to activate')
     if (canBoostedButNot) return t('Yield booster available')
     if (boosted) return t('Active')

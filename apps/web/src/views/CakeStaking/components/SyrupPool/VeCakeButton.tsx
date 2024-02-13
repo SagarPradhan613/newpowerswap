@@ -4,9 +4,9 @@ import { useRouter } from 'next/router'
 import { memo } from 'react'
 
 const BUTTON_TEXT = {
-  get: <Trans>Get veCAKE now!</Trans>,
-  migrate: <Trans>Migrate to veCAKE</Trans>,
-  check: <Trans>Check out veCAKE</Trans>,
+  get: <Trans>Get vePOWER now!</Trans>,
+  migrate: <Trans>Migrate to vePOWER</Trans>,
+  check: <Trans>Check out vePOWER</Trans>,
 }
 
 export const VeCakeButton: React.FC<{ type: 'get' | 'migrate' | 'check'; style?: React.CSSProperties }> = memo(

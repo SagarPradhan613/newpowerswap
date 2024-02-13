@@ -41,7 +41,7 @@ export function LockInfoCard({ amount = 0, usdPrice = 0, unlockAt = 0, ...props 
         <RowBetween>
           <AutoColumn>
             <Text fontSize="0.75rem" color="textSubtle" textTransform="uppercase" bold>
-              {t("CAKE locked")}
+              {t("POWER locked")}
             </Text>
             <BalanceDisplay bold value={amountNum} decimals={2} fontSize="1.25rem" />
             <BalanceDisplay prefix="~" value={usdAmount} decimals={2} unit=" USD" fontSize="0.75rem" />

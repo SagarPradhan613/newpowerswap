@@ -111,7 +111,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = memo(
           <Swap.CurrencyInputHeaderSubTitle>{subtitle}</Swap.CurrencyInputHeaderSubTitle>
         </Flex>
         <Flex width="100%" justifyContent="end">
-          {SUPPORT_BUY_CRYPTO.includes(chainId) ? (
+          {/* {SUPPORT_BUY_CRYPTO.includes(chainId) ? (
             <Flex alignItems="center" justifyContent="center" px="4px" mt="5px">
               <TooltipText
                 ref={buyCryptoTargetRef}
@@ -125,7 +125,7 @@ const CurrencyInputHeader: React.FC<React.PropsWithChildren<Props>> = memo(
               </TooltipText>
               {buyCryptoTooltipVisible && (!isMobile || mobileTooltipShow) && buyCryptoTooltip}
             </Flex>
-          ) : null}
+          ) : null} */}
           {isChartSupported && setIsChartDisplayed && (
             <ColoredIconButton
               onClick={() => {

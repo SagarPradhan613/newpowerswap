@@ -35,7 +35,7 @@ export const NotLockingCard = () => {
 
   return (
     <StyledCard innerCardProps={{ padding: ['24px 16px', '24px 16px', '24px'] }}>
-      <Heading scale="md">{t('Lock CAKE to get veCAKE')}</Heading>
+      <Heading scale="md">{t('Lock POWER to get vePOWER')}</Heading>
       <Grid
         gridTemplateColumns={isDesktop ? '1fr 1fr' : '1fr'}
         gridColumnGap="24px"
@@ -51,7 +51,7 @@ export const NotLockingCard = () => {
       <ColumnCenter>
         {account ? (
           <Button disabled={disabled} width={['100%', '100%', '50%']} onClick={handleModalOpen}>
-            {t('Lock CAKE')}
+            {t('Lock POWER')}
           </Button>
         ) : (
           <ConnectWalletButton width={['100%', '100%', '50%']} />

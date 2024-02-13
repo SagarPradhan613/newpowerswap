@@ -17,10 +17,10 @@ type BenefitItem = {
 export const BENEFITS: Record<BenefitCardType, BenefitItem> = {
   earnCake: {
     headImg: '/images/cake-staking/benefit-earn-cake.png',
-    title: <Trans>Earn CAKE</Trans>,
+    title: <Trans>Earn POWER</Trans>,
     subTitle: <Trans>Total Distributed</Trans>,
     btnText: <Trans>Check Reward</Trans>,
-    desc: [<Trans>Weekly revenue sharing</Trans>, <Trans>Weekly CAKE pool rewards</Trans>],
+    desc: [<Trans>Weekly revenue sharing</Trans>, <Trans>Weekly POWER pool rewards</Trans>],
     key: 'benefit-earn-cake',
   },
   gaugesVoting: {
@@ -50,7 +50,7 @@ export const BENEFITS: Record<BenefitCardType, BenefitItem> = {
     subTitle: <Trans>Number of Proposals</Trans>,
     btnText: <Trans>Check Snapshot Voting</Trans>,
     link: '/voting',
-    desc: [<Trans>Use your veCAKE to vote on important governance proposals</Trans>],
+    desc: [<Trans>Use your vePOWER to vote on important governance proposals</Trans>],
     key: 'benefit-snapshot-voting',
   },
   ifo: {

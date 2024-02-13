@@ -25,6 +25,9 @@ const BalanceInput: React.FC<React.PropsWithChildren<BalanceInputProps>> = ({
     }
   };
 
+  console.log(currencyValue, "cureency");
+  console.log(typeof currencyValue);
+
   return (
     <StyledBalanceInput isWarning={isWarning} {...props}>
       <Flex justifyContent="flex-end">
@@ -42,11 +45,17 @@ const BalanceInput: React.FC<React.PropsWithChildren<BalanceInputProps>> = ({
                 ref={innerRef}
                 {...inputProps}
               />
-              {unit && <UnitContainer>{unit}</UnitContainer>}
+              {/* {unit && <UnitContainer>{unit}</UnitContainer>} */}
+              {unit && <UnitContainer>{unit === "CAKE" ? "POWER" : unit}</UnitContainer>}
             </Flex>
             {currencyValue && (
+              // <Text fontSize="12px" textAlign="right" color="textSubtle">
+              //   {currencyValue}
+              // </Text>
               <Text fontSize="12px" textAlign="right" color="textSubtle">
-                {currencyValue}
+                {typeof currencyValue === "string" && currencyValue.includes("CAKE")
+                  ? currencyValue.replace("CAKE", "POWER")
+                  : currencyValue}
               </Text>
             )}
           </Box>

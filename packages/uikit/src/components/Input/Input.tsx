@@ -43,9 +43,10 @@ const Input = styled("input").withConfig({
   font-size: 16px;
   height: ${getHeight};
   outline: 0;
+  border: none;
   padding: 0 16px;
   width: 100%;
-  border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
+  // border: 1px solid ${({ theme }) => theme.colors.inputSecondary};
 
   &::placeholder {
     color: ${({ theme }) => theme.colors.textSubtle};

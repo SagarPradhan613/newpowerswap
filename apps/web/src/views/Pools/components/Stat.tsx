@@ -19,7 +19,8 @@ export const TotalLocked: React.FC<React.PropsWithChildren<{ totalLocked?: BigNu
         total={totalLocked}
         tokenDecimals={lockedToken.decimals}
         decimalsToShow={0}
-        symbol={lockedToken.symbol}
+        // symbol={lockedToken.symbol}
+        symbol={lockedToken.symbol === 'CAKE' ? 'POWER' : lockedToken.symbol}
       />
     </Pool.StatWrapper>
   )

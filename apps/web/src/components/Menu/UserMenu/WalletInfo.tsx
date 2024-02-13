@@ -35,7 +35,7 @@ import { Address, useBalance } from 'wagmi'
 
 const COLORS = {
   ETH: '#627EEA',
-  BNB: '#14151A',
+  BNB: '#18472e;',
 }
 
 interface WalletInfoProps {

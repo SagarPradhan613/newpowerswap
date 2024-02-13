@@ -22,7 +22,7 @@ export function StakeButton(props: Props) {
   const tips = (
     <Flex flexDirection="column" justifyContent="flex-start">
       <ICakeLogo />
-      <Text mt="0.625rem">{t('Stake CAKE to obtain iCAKE - in order to be eligible in this public sale.')}</Text>
+      <Text mt="0.625rem">{t('Stake POWER to obtain iPOWER - in order to be eligible in this public sale.')}</Text>
     </Flex>
   )
 
@@ -31,16 +31,16 @@ export function StakeButton(props: Props) {
       <NetworkSwitcherModal
         isOpen={isOpen}
         supportedChains={CAKE_VAULT_SUPPORTED_CHAINS}
-        title={t('Stake CAKE')}
-        description={t('Lock CAKE on %chain% to obtain iCAKE', {
+        title={t('Stake POWER')}
+        description={t('Lock POWER on %chain% to obtain iPOWER', {
           chain: chainNames,
         })}
-        buttonText={t('Switch chain to stake CAKE')}
+        buttonText={t('Switch chain to stake POWER')}
         onDismiss={onDismiss}
         tips={tips}
       />
       <Button width="100%" onClick={onOpen} {...props}>
-        {t('Stake CAKE')}
+        {t('Stake POWER')}
       </Button>
     </>
   ) : null

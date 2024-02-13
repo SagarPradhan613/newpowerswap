@@ -26,7 +26,13 @@ const TotalStakedCell: React.FC<React.PropsWithChildren<TotalStakedCellProps>> =
         </Text>
         {totalStaked && totalStaked.gte(0) ? (
           <Flex height="20px" alignItems="center">
-            <Balance fontSize="16px" value={totalStakedBalance} decimals={0} unit={` ${stakingToken.symbol}`} />
+            {/* <Balance fontSize="16px" value={totalStakedBalance} decimals={0} unit={` ${stakingToken.symbol}`} /> */}
+            <Balance
+              fontSize="16px"
+              value={totalStakedBalance}
+              decimals={0}
+              unit={` ${stakingToken.symbol === 'CAKE' ? 'POWER' : stakingToken.symbol}`}
+            />
           </Flex>
         ) : (
           <Skeleton width="80px" height="16px" />

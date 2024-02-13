@@ -156,10 +156,9 @@ const RoiCalculatorModal: React.FC<React.PropsWithChildren<RoiCalculatorModalPro
   const { targetRef, tooltip, tooltipVisible } = useTooltip(
     isFarm
       ? t("“My Balance” here includes both LP Tokens in your wallet, and LP Tokens already staked in this farm.")
-      : t(
-          "“My Balance” here includes both %assetSymbol% in your wallet, and %assetSymbol% already staked in this pool.",
-          { assetSymbol: stakingTokenSymbol }
-        ),
+      : t("“My Balance” here includes both POWER in your wallet, and POWER already staked in this pool.", {
+          assetSymbol: stakingTokenSymbol,
+        }),
     { placement: "top-end", tooltipOffset: [20, 10] }
   );
 
@@ -203,7 +202,8 @@ const RoiCalculatorModal: React.FC<React.PropsWithChildren<RoiCalculatorModalPro
         {header}
         <Flex flexDirection="column" mb="8px">
           <Text color="secondary" bold fontSize="12px" textTransform="uppercase">
-            {t("%asset% staked", { asset: stakingTokenSymbol })}
+            {/* {t("%asset% staked", { asset: stakingTokenSymbol })} */}
+            {t("%asset% staked", { asset: stakingTokenSymbol === "CAKE" ? "POWER" : stakingTokenSymbol })}
           </Text>
           <BalanceInput
             inputProps={{ scale: "sm" }}
@@ -259,7 +259,7 @@ const RoiCalculatorModal: React.FC<React.PropsWithChildren<RoiCalculatorModalPro
           {children || (
             <>
               <Text mt="24px" color="secondary" bold fontSize="12px" textTransform="uppercase">
-                {t("Staked for")}
+                {t("duration")}
               </Text>
               <FullWidthButtonMenu activeIndex={stakingDuration} onItemClick={setStakingDuration} scale="sm">
                 {DURATION.map((duration) => (

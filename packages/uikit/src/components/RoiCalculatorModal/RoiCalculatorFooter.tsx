@@ -132,7 +132,7 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
                   {displayApr}%
                 </Text>
                 <Text color="textSubtle" small>
-                  {`*${t("Base APR (CAKE yield only)")}`}
+                  {`*${t("Base APR (POWER yield only)")}`}
                 </Text>
                 <Text small textAlign="right">
                   {`${cakeRewardAPRDisplay?.toLocaleString("en-US", {
@@ -250,7 +250,7 @@ const RoiCalculatorFooter: React.FC<React.PropsWithChildren<RoiCalculatorFooterP
           </BulletList>
           {linkHref && (
             <Flex justifyContent="center" mt="24px">
-              <LinkExternal href={linkHref}>{linkLabel}</LinkExternal>
+              <LinkExternal href={linkHref}>BUY POWER</LinkExternal>
             </Flex>
           )}
         </Box>

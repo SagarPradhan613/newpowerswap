@@ -168,7 +168,7 @@ const LockedInfo = () => {
             </Message>
           )}
           <Link external style={{ textDecoration: 'none', width: '100%' }} href="/pools">
-            <Button width="100%" variant="secondary">
+            <Button width="100%" variant="primary">
               {t('View POWER Pool Position')}
             </Button>
           </Link>
