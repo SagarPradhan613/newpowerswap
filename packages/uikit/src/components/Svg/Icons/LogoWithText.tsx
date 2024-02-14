@@ -30,7 +30,7 @@ const Logo: React.FC<React.PropsWithChildren<SvgProps>> = (props) => {
     //     fill="#633001"
     //   />
     // </Svg>
-    <img src="/images/Logo.png" alt="logo" />
+    <img style={{ maxWidth: "141px" }} src="/images/newpowerlogo.png" alt="logo" />
   );
 };
 

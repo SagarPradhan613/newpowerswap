@@ -39,18 +39,16 @@ const StyledNav = styled.nav`
   transform: translate3d(0, 0, 0);
 
   @media (max-width: 767px) {
+    height: 80px;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
   }
 
   /* Tablet styles */
   @media (min-width: 768px) and (max-width: 1023px) {
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    height: 80px;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   /* Desktop styles */
@@ -187,7 +185,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                 <AtomBox mr="12px" display={{ xs: "none", lg: "block" }}>
                   <CakePrice chainId={chainId} showSkeleton={false} cakePriceUsd={cakePriceUsd} />
                 </AtomBox>
-                <Box mt="4px">
+                {/* <Box mt="4px">
                   <LangSelector
                     currentLang={currentLang}
                     langs={langs}
@@ -196,7 +194,7 @@ const Menu: React.FC<React.PropsWithChildren<NavProps>> = ({
                     color="textSubtle"
                     hideLanguage
                   />
-                </Box>
+                </Box> */}
                 {rightSide}
               </Flex>
             </StyledNav>

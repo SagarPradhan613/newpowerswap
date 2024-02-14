@@ -41,13 +41,50 @@ const StyledLink = styled("a")`
   }
 `;
 
+const DesktopLogoContainer = styled.div`
+  @media (max-width: 767px) {
+    display: none;
+  }
+
+  /* Styles for tablet screens */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: none;
+  }
+
+  /* Styles for desktop screens */
+  @media (min-width: 1024px) {
+    display: block;
+  }
+`;
+
+const MobLogoContainer = styled.div`
+  @media (max-width: 767px) {
+    display: block;
+  }
+
+  /* Styles for tablet screens */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    display: block;
+  }
+
+  /* Styles for desktop screens */
+  @media (min-width: 1024px) {
+    display: none;
+  }
+`;
+
 const Logo: React.FC<React.PropsWithChildren<Props>> = ({ href }) => {
   const { linkComponent } = useContext(MenuContext);
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
       {/* <LogoIcon className="mobile-icon" /> */}
-      <LogoWithTextIcon className="desktop-icon" />
+      <DesktopLogoContainer>
+        <LogoWithTextIcon className="desktop-icon" />
+      </DesktopLogoContainer>
+      <MobLogoContainer>
+        <img style={{ height: "40px" }} src="/images/moblogo.png" alt="mobile logo" />
+      </MobLogoContainer>
     </>
   );
 
